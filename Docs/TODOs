@@ -1,0 +1,8 @@
+- Signal Detection Measures (Nr of TP, FP, TN, FN)
+- RT (duration for decision)
+- Confidence Rating (VAS)
+- Stop the Test after 15x presenting noise only
+- First 5 Trials without 33% Noise probability
+- First have large steps, then use 1DB steps – maybe like here in Ableton:
+- GUI flow
+- predefined 
