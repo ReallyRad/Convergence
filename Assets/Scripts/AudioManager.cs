@@ -10,14 +10,34 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private IntVariable _trialCount;
     [SerializeField] private IntVariable _mootTrials;
     [SerializeField] private FloatVariable _curentVolume;
+    [SerializeField] private Response _response;
 
     public void PlaySounds()
     {
-        _trialCount.Value++;
-        if (_trialCount.Value < _mootTrials.Value)
+        if (_trialCount.Value > _mootTrials.Value) 
         {
-            _noiseSource.Play();
-            _stimulusSource.Play();    
+            var randomVal = UnityEngine.Random.Range(0f, 1f);
+            
+            if (randomVal <= 0.333) //33% chance
+            {
+                _noiseSource.volume = _curentVolume.Value;
+                _stimulusSource.volume = _curentVolume.Value;
+            }
+            else if (randomVal >= 0.333) //66% chance
+            {
+                _noiseSource.volume = _curentVolume.Value;
+                _stimulusSource.volume = 0;
+            }
         }
+
+        _noiseSource.Play();
+        _stimulusSource.Play();    
     }
+
+    public void OkButtonPressed()
+    {
+        if (_response.response == ResponseValue.yes && _trialCount >= 5)
+            _curentVolume.Value -= 1;
+    }
+
 }

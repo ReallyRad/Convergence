@@ -8,6 +8,7 @@ public class StateManager : MonoBehaviour
 {
     [SerializeField] private IntVariable _trialCount;
     [SerializeField] private Response _response;
+    [SerializeField] private FloatVariable _currentVolume;
 
     private void Awake()
     {
