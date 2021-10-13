@@ -20,4 +20,5 @@ public class StateManager : MonoBehaviour
         _response.response = ResponseValue.none;
         _response.confidence = 0.5f;
     }
+    
 }

@@ -30,5 +30,10 @@ public class DiscriminationTask : MonoBehaviour
         if(there) _response.response = ResponseValue.yes;
         else _response.response = ResponseValue.no;
     }
+
+    public void Reset()
+    {
+        _confidenceSlider.value = 0.5f;
+    }
     
 }

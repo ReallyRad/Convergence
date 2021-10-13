@@ -554,6 +554,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 440320384}
     m_Modifications:
+    - target: {fileID: 7809964100416283205, guid: 36348dba8c437485da89108ddb764390, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: a9253c13e243349ada58c8afc68026b9, type: 2}
     - target: {fileID: 7809964100416283206, guid: 36348dba8c437485da89108ddb764390, type: 3}
       propertyPath: m_Name
       value: StateManager
