@@ -17,5 +17,7 @@ public class StateManager : MonoBehaviour
     public void TrialDone()
     {
         _trialCount.Value++;
+        _response.response = ResponseValue.none;
+        _response.confidence = 0.5f;
     }
 }

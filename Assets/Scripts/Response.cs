@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 public enum ResponseValue {yes, no, none}
 
 [CreateAssetMenu]
@@ -7,9 +8,9 @@ public class Response : ScriptableObject
     public ResponseValue response;
     public float confidence;
 
-    private void Awake()
+    private void OnEnable()
     {
         response = ResponseValue.none;
-        confidence = 0;
+        confidence = 0.5f;
     }
 }
