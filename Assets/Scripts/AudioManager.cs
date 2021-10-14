@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -10,11 +8,16 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource _stimulusSource;
     [SerializeField] private IntVariable _trialCount;
     [SerializeField] private IntVariable _mootTrials;
-    [SerializeField] private FloatVariable _curentVolume;
+    [SerializeField] private FloatVariable _currentVolume;
     [SerializeField] private Response _response;
-
     [SerializeField] private AudioMixer _mixer;
-    
+
+
+    private void Awake()
+    {
+        _currentVolume.Value = 0;
+    }
+
     public void PlaySounds()
     {
         if (_trialCount.Value > _mootTrials.Value) 
@@ -23,12 +26,12 @@ public class AudioManager : MonoBehaviour
             
             if (randomVal <= 0.333) //33% chance
             {
-                _noiseSource.volume = _curentVolume.Value;
-                _stimulusSource.volume = _curentVolume.Value;
+                _noiseSource.volume = _currentVolume.Value;
+                _stimulusSource.volume = _currentVolume.Value;
             }
             else if (randomVal >= 0.333) //66% chance
             {
-                _noiseSource.volume = _curentVolume.Value;
+                _noiseSource.volume = _currentVolume.Value;
                 _stimulusSource.volume = 0;
             }
         }
@@ -41,9 +44,8 @@ public class AudioManager : MonoBehaviour
     {
         if (_response.response == ResponseValue.yes && _trialCount >= 5)
         {
-            _curentVolume.Value -= 1;
-            _mixer.SetFloat("StimulusVolume", _curentVolume.Value);
+            _currentVolume.Value -= 1;
+            _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
         }
     }
-
 }

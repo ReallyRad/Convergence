@@ -178,7 +178,7 @@ MonoBehaviour:
   _stimulusSource: {fileID: 3110612543381895939}
   _trialCount: {fileID: 11400000, guid: 094e3050b55c24225bfcb0409eba0bc2, type: 2}
   _mootTrials: {fileID: 11400000, guid: d9803cddfb513425ab895fb620232cd0, type: 2}
-  _curentVolume: {fileID: 11400000, guid: 31bc7b13457e04fd98c88fe817692f9d, type: 2}
+  _currentVolume: {fileID: 11400000, guid: 31bc7b13457e04fd98c88fe817692f9d, type: 2}
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _mixer: {fileID: 24100000, guid: e965036173f5c46f490a586675e5ff49, type: 2}
 --- !u!114 &8336087286481640255
