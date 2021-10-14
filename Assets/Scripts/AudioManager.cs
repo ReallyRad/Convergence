@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ScriptableObjectArchitecture;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private FloatVariable _curentVolume;
     [SerializeField] private Response _response;
 
+    [SerializeField] private AudioMixer _mixer;
+    
     public void PlaySounds()
     {
         if (_trialCount.Value > _mootTrials.Value) 
@@ -37,7 +40,10 @@ public class AudioManager : MonoBehaviour
     public void OkButtonPressed()
     {
         if (_response.response == ResponseValue.yes && _trialCount >= 5)
+        {
             _curentVolume.Value -= 1;
+            _mixer.SetFloat("StimulusVolume", _curentVolume.Value);
+        }
     }
 
 }
