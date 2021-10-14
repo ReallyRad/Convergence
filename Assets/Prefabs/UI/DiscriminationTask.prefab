@@ -1560,7 +1560,6 @@ GameObject:
   - component: {fileID: 4036871674859321562}
   - component: {fileID: 1189104373}
   - component: {fileID: 1189104372}
-  - component: {fileID: 5290952033286802586}
   m_Layer: 0
   m_Name: DiscriminationTask
   m_TagString: Untagged
@@ -1689,7 +1688,7 @@ MonoBehaviour:
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
   _previouslyRegisteredEvent: {fileID: 11400000, guid: a9253c13e243349ada58c8afc68026b9, type: 2}
-  _event: {fileID: 11400000, guid: a9253c13e243349ada58c8afc68026b9, type: 2}
+  _event: {fileID: 11400000, guid: b60d097628f8f4bf888e67a34156028b, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -1732,26 +1731,6 @@ MonoBehaviour:
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _OkButtonPressedEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
   _confidenceSlider: {fileID: 5847405850010276455}
---- !u!114 &5290952033286802586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8728131012252178862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
-  _event: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &8920703516398552724
 GameObject:
   m_ObjectHideFlags: 0

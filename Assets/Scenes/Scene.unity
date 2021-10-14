@@ -123,43 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &335261057 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7809964100416283206, guid: 36348dba8c437485da89108ddb764390, type: 3}
-  m_PrefabInstance: {fileID: 7809964099100889638}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &335261058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335261057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
-  _event: {fileID: 0}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &420026127
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +488,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5354852805207843390, guid: 8ce9ffdcfcd63472b8f5fd6ca451a610, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: b60d097628f8f4bf888e67a34156028b, type: 2}
+    - target: {fileID: 5471780036112740050, guid: 8ce9ffdcfcd63472b8f5fd6ca451a610, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce9ffdcfcd63472b8f5fd6ca451a610, type: 3}
 --- !u!1001 &7723583213428760036
@@ -591,6 +562,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 440320384}
     m_Modifications:
+    - target: {fileID: 7809964100416283205, guid: 36348dba8c437485da89108ddb764390, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: b60d097628f8f4bf888e67a34156028b, type: 2}
     - target: {fileID: 7809964100416283206, guid: 36348dba8c437485da89108ddb764390, type: 3}
       propertyPath: m_Name
       value: StateManager
@@ -705,6 +680,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420026128}
     m_Modifications:
+    - target: {fileID: 1189104373, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: b60d097628f8f4bf888e67a34156028b, type: 2}
     - target: {fileID: 2093514929369812629, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
