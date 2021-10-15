@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 1851646340112552899}
   - component: {fileID: 7871356021042898553}
   - component: {fileID: 1860307290997137079}
+  - component: {fileID: 2989987456715643016}
   m_Layer: 0
   m_Name: 'Introduction canvas 3 Example '
   m_TagString: Untagged
@@ -249,6 +250,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &2989987456715643016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826343686466936877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef25a7532f744582b19f630b21f7322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4357409721211867147
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,12 +20,7 @@ public class AudioManager : MonoBehaviour
     {
         _currentVolume.Value = 0;
     }
-
-    private void Start()
-    {
-        PlaySounds();
-    }
-
+    
     private void Update()
     {
         if (!_stimulusSource.isPlaying)
