@@ -58,6 +58,12 @@ public class AudioManager : MonoBehaviour
         _stimulusSource.Play();    
     }
 
+    public void PlaySound(int sound)
+    {
+        if (sound == 1) _noiseSource.Play();
+        if (sound == 2) _stimulusSource.Play();
+    }
+    
     public void OkButtonPressed()
     {
         if (_response.response == ResponseValue.yes && _trialCount >= _mootTrials.Value)
