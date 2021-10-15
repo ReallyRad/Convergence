@@ -1327,6 +1327,7 @@ GameObject:
   - component: {fileID: 1655588284781128165}
   - component: {fileID: 7196107073283298908}
   - component: {fileID: 1680765496243348454}
+  - component: {fileID: 4539878637162167869}
   m_Layer: 0
   m_Name: Introduction canvas 4 Confidence Expl
   m_TagString: Untagged
@@ -1415,6 +1416,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &4539878637162167869
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725804243752723890}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &7544992689375267670
 GameObject:
   m_ObjectHideFlags: 0
