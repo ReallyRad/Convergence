@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 2132468972807949126}
   - {fileID: 3202433331814387542}
   - {fileID: 6205608361667293216}
+  _introFinishedEvent: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
 --- !u!1001 &813010500689803974
 PrefabInstance:
   m_ObjectHideFlags: 0

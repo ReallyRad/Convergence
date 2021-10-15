@@ -201,13 +201,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420026128}
     m_Modifications:
+    - target: {fileID: 1189104373, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
     - target: {fileID: 2093514929369812629, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6125696028922947099, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8728131012252178857, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
       propertyPath: m_Pivot.x
@@ -299,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8728131012252178862, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb36f51b001514ab397d938c761b8bc4, type: 3}
@@ -601,12 +605,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 111574049024107637, guid: 8ce9ffdcfcd63472b8f5fd6ca451a610, type: 3}
       propertyPath: m_Name
-      value: StartCanvas
+      value: ListenCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 111574049024107637, guid: 8ce9ffdcfcd63472b8f5fd6ca451a610, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 6684871929045193110, guid: 8ce9ffdcfcd63472b8f5fd6ca451a610, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce9ffdcfcd63472b8f5fd6ca451a610, type: 3}
 --- !u!1001 &813010500197823116
@@ -819,6 +823,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 440320384}
     m_Modifications:
+    - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
     - target: {fileID: 8336087286481640242, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: m_Name
       value: AudioManager

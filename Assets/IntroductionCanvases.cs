@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjectArchitecture;
 using UnityEngine;
 
 public class IntroductionCanvases : MonoBehaviour
 {
     [SerializeField] private GameObject[] _introductionCanvases;
+    [SerializeField] private GameEvent _introFinishedEvent;
+
     private int _introductionCanvasesIndex;
     
     public void NextButton()
@@ -15,7 +18,7 @@ public class IntroductionCanvases : MonoBehaviour
         }
         else
         {
-            //start the experiment
+            _introFinishedEvent.Raise(); //start the experiment
         }
         _introductionCanvases[_introductionCanvasesIndex].GetComponent<PanelDimmer>().Hide();//hide the current one
 
