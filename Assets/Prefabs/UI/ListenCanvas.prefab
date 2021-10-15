@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 111574049024107625}
   - component: {fileID: 111574049024107626}
   - component: {fileID: 111574049024107627}
+  - component: {fileID: 1559365849125497975}
   m_Layer: 5
-  m_Name: StartCanvas
+  m_Name: ListenCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,6 +101,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &1559365849125497975
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111574049024107637}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &2713035848732720357
 GameObject:
   m_ObjectHideFlags: 0
