@@ -862,10 +862,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Feedback Canvas '
       objectReference: {fileID: 0}
-    - target: {fileID: 2555498142598857827, guid: f84838c7663744eafacbc0fa4c8e6f5a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84838c7663744eafacbc0fa4c8e6f5a, type: 3}
 --- !u!224 &1763538761 stripped
