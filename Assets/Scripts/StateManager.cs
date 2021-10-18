@@ -7,6 +7,8 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     [SerializeField] private IntVariable _trialCount;
+    [SerializeField] private IntVariable _numberOfTrials;
+    [SerializeField] private GameEvent _experimentFinished;
     [SerializeField] private Response _response;
 
     private void Awake()
@@ -17,8 +19,12 @@ public class StateManager : MonoBehaviour
     public void TrialDone()
     {
         _trialCount.Value++;
-        _response.response = ResponseValue.none;
-        _response.confidence = 0.5f;
+        if (_trialCount.Value < _numberOfTrials.Value)
+        {
+            _response.response = ResponseValue.none;
+            _response.confidence = 0.5f;    
+        } else
+            _experimentFinished.Raise();
     }
     
 }

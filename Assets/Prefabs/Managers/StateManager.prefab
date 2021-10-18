@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trialCount: {fileID: 11400000, guid: 094e3050b55c24225bfcb0409eba0bc2, type: 2}
+  _numberOfTrials: {fileID: 11400000, guid: 84a7342b82fc74a92b7ad91b5010c2bb, type: 2}
+  _experimentFinished: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
 --- !u!114 &7809964100416283205
 MonoBehaviour:
@@ -61,7 +63,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: a9253c13e243349ada58c8afc68026b9, type: 2}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
   _event: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
   _response:
     m_PersistentCalls:
