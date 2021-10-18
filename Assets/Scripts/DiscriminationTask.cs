@@ -11,6 +11,8 @@ public class DiscriminationTask : MonoBehaviour
     [SerializeField] private ObjectGameEvent _OkButtonPressedEvent;
     [SerializeField] private Slider _confidenceSlider;
 
+    private bool _introFinished;
+    
     private void OnEnable()
     {
         _confidenceSlider.onValueChanged.AddListener(delegate(float value)
@@ -33,7 +35,12 @@ public class DiscriminationTask : MonoBehaviour
 
     public void Reset()
     {
+        if (_introFinished) GetComponent<PanelDimmer>().Show();
         _confidenceSlider.value = 0.5f;
     }
-    
+
+    public void IntroFinished()
+    {
+        _introFinished = true;
+    }
 }

@@ -1560,6 +1560,7 @@ GameObject:
   - component: {fileID: 4036871674859321562}
   - component: {fileID: 1189104373}
   - component: {fileID: 1189104372}
+  - component: {fileID: 6319075156664770860}
   m_Layer: 0
   m_Name: DiscriminationTask
   m_TagString: Untagged
@@ -1692,18 +1693,6 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4036871674859321562}
-        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1189104372}
         m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
         m_MethodName: Reset
@@ -1731,6 +1720,38 @@ MonoBehaviour:
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _OkButtonPressedEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
   _confidenceSlider: {fileID: 5847405850010276455}
+--- !u!114 &6319075156664770860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728131012252178862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
+  _event: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1189104372}
+        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
+        m_MethodName: IntroFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8920703516398552724
 GameObject:
   m_ObjectHideFlags: 0
