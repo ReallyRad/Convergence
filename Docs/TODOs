@@ -1,16 +1,16 @@
 TODO
 - Firebaase backend for Signal Detection Measures (Nr of TP, FP, TN, FN) RT (duration for decision) with https://github.com/rotolonico/FirebaseWebGL
-- Confidence Rating (VAS)
 - Stop the Test after 15x presenting noise only
 - First have large steps, then use 1DB steps – maybe like here in Ableton:
-- GUI flow
 - predefined 
-- end screen 
 - adjust the probaility of showing the Noise only file, and the 1 Up/1Down algorithm.
 - on end screen show the signal detection values
 - the number of tp, fp, tn, fn, mean reaction tiems, mean confidence ratings 
 
 DONE 
+- GUI flow
+- end screen 
+- Confidence Rating (VAS)
 - skip through introductions.
 - remove start OK button, switch panels when sound ends
 - play sound on start sreen
