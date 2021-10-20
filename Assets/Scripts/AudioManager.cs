@@ -14,6 +14,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixer _mixer;
     [SerializeField] private GameEvent _audioFinishedEvent;
 
+    [SerializeField] private float _probabilityCutoff;
+    [SerializeField] private float _volumeIncrements;
+    
     private bool _audioPlaying;
     
     private void Awake()
@@ -42,12 +45,12 @@ public class AudioManager : MonoBehaviour
         {
             var randomVal = UnityEngine.Random.Range(0f, 1f);
             
-            if (randomVal <= 0.333) //33% chance
+            if (randomVal <= _probabilityCutoff) //33% chance
             {
                 _noiseSource.volume = 1f;
                 _stimulusSource.volume = 1f;
             }
-            else if (randomVal >= 0.333) //66% chance
+            else if (randomVal >= _probabilityCutoff) //66% chance
             {
                 _noiseSource.volume = 1;
                 _stimulusSource.volume = 0;
@@ -68,7 +71,7 @@ public class AudioManager : MonoBehaviour
     {
         if (_response.response == ResponseValue.yes && _trialCount >= _mootTrials.Value)
         {
-            _currentVolume.Value -= 1;
+            _currentVolume.Value -= _volumeIncrements;
             _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
         }
         PlaySounds();
