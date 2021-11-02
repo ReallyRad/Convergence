@@ -462,8 +462,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
-        m_MethodName: OKButtonPressed
+        m_TargetAssemblyTypeName: IntroductionCanvases, Assembly-CSharp
+        m_MethodName: NextButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -788,7 +788,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 453ac56f083cd4ebb95ceec5a07c872a, type: 3}
+    m_Font: {fileID: 12800000, guid: 289d9a0ac0d5c45b6a754c37f16e2b29, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0

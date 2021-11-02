@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4789963880202552991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -158,11 +158,11 @@ RectTransform:
   m_Father: {fileID: 159245041084946689}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 500}
   m_SizeDelta: {x: 0, y: 50}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &2858053390640731412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -191,8 +191,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\n\nThis is a test to measure \r\nyour auditory fantasy proneness. \r\n\r\n...\r\n\r\nPlease
-    wear good headphones for the test. \r\n"
+  m_text: "\n\n\nIn this experiment you will listen for a melody in briefly presented
+    noisy sound. \nIf there is a melody, press \"yes\". If there is no melody, press
+    \"no\", as soon as you hear the melody. There are 6 practice blocks. The first
+    two blocks will be the easiest, to demonstrate what the melody sounds like. The
+    melody will become increasingly more difficult to perceive over time. The melody
+    will always appear on 66% of trials, randomly mixed within a block. Please wear
+    good headphones for the test.             \t\t\t\t\t\t\t\t\t\t\r\n\n\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
@@ -226,7 +231,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 16
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -255,7 +260,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 200, y: 0, z: 200, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -376,7 +381,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 160}
-  m_SizeDelta: {x: 140, y: 50}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &821160504721838888
 CanvasRenderer:
@@ -461,8 +466,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
-        m_MethodName: OKButtonPressed
+        m_TargetAssemblyTypeName: IntroductionCanvases, Assembly-CSharp
+        m_MethodName: NextButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -679,12 +684,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 453ac56f083cd4ebb95ceec5a07c872a, type: 3}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: 289d9a0ac0d5c45b6a754c37f16e2b29, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 3
+    m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
