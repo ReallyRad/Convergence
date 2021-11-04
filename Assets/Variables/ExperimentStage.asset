@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: ExperimentStage
   m_EditorClassIdentifier: 
   stage: 0
+  practiceRound: 0
+  trialCount: 0
+  mootTrials: 0
+  numberOfTrials: 0

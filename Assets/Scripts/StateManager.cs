@@ -6,16 +6,16 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    [SerializeField] private IntVariable _trialCount;
-    [SerializeField] private IntVariable _numberOfTrials;
     [SerializeField] private GameEvent _experimentFinished;
+    [SerializeField] private GameEvent _practiceFinihsed;
     [SerializeField] private Response _response;
     [SerializeField] private ExperimentStage _experimentStage;
 
     private void Awake()
     {
-        _trialCount.Value = 0;
+        _experimentStage.trialCount = 0;
         _experimentStage.stage = Stage.online;
+        _experimentStage.practiceRound = true;
     }
 
     public void TrialDone()
