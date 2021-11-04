@@ -8,7 +8,7 @@ public class StateManager : MonoBehaviour
 {
     [SerializeField] private GameEvent _experimentFinished;
     [SerializeField] private GameEvent _practiceFinished;
-    [SerializeField] private GameEvent _taskFinished;
+    [SerializeField] private GameEvent _trialDone;
     [SerializeField] private Response _response;
     [SerializeField] private ExperimentStage _experimentStage;
     private void Awake()
@@ -29,7 +29,7 @@ public class StateManager : MonoBehaviour
            //if we reached last trial
            if (_experimentStage.trialCount < _experimentStage.mootTrials) //if we haven't reached the last trial
            {
-               _taskFinished.Raise(); //go for another round
+               _trialDone.Raise(); //go for another round
            }
            else //if we reached the last trial of this practice round
            {
@@ -44,7 +44,7 @@ public class StateManager : MonoBehaviour
             {
                 if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
                 {
-                    _taskFinished.Raise(); //go for another round
+                    _trialDone.Raise(); //go for another round
                 }
                 else //if we reached the last trials
                 {

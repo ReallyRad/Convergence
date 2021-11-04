@@ -1119,6 +1119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917184056}
     m_Modifications:
+    - target: {fileID: 2125240576061830237, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3609621632884394200, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1442,10 +1446,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 440320384}
     m_Modifications:
-    - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+    - target: {fileID: 2550021154844234743, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: _previouslyRegisteredEvent
       value: 
-      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
+      objectReference: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
     - target: {fileID: 8336087286481640242, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: m_Name
       value: AudioManager

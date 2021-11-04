@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _experimentFinished: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
   _practiceFinished: {fileID: 11400000, guid: 61c62c3f1b5434b64bde0b13261346f9, type: 2}
-  _taskFinished: {fileID: 11400000, guid: 5298d6ebaac394224843638d3bf1339b, type: 2}
+  _trialDone: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &7809964100416283205

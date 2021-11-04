@@ -60,7 +60,6 @@ public class AudioManager : MonoBehaviour
                 _stimulusSource.volume = 0;
             }
         }
-
         _noiseSource.Play();
         _stimulusSource.Play();    
     }
