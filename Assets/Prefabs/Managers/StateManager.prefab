@@ -48,6 +48,7 @@ MonoBehaviour:
   _numberOfTrials: {fileID: 11400000, guid: 84a7342b82fc74a92b7ad91b5010c2bb, type: 2}
   _experimentFinished: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
+  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &7809964100416283205
 MonoBehaviour:
   m_ObjectHideFlags: 0

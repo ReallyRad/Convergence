@@ -10,10 +10,12 @@ public class StateManager : MonoBehaviour
     [SerializeField] private IntVariable _numberOfTrials;
     [SerializeField] private GameEvent _experimentFinished;
     [SerializeField] private Response _response;
+    [SerializeField] private ExperimentStage _experimentStage;
 
     private void Awake()
     {
         _trialCount.Value = 0;
+        _experimentStage.stage = Stage.offline;
     }
 
     public void TrialDone()
