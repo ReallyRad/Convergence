@@ -601,8 +601,8 @@ GameObject:
   - component: {fileID: 1268559104236703964}
   - component: {fileID: 4601194732557164090}
   - component: {fileID: 8013113677714647653}
-  - component: {fileID: 7898865273442778447}
   - component: {fileID: 6475796269049210503}
+  - component: {fileID: 7898865273442778447}
   m_Layer: 0
   m_Name: Online Experiment Instructions
   m_TagString: Untagged
@@ -715,6 +715,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef25a7532f744582b19f630b21f7322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6475796269049210503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7731572576573233873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f9b9c52cc8d4bb6a66b74b1256906c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stage: 0
+  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &7898865273442778447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +744,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 61c62c3f1b5434b64bde0b13261346f9, type: 2}
   _event: {fileID: 11400000, guid: 61c62c3f1b5434b64bde0b13261346f9, type: 2}
   _response:
     m_PersistentCalls:
@@ -747,17 +761,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6475796269049210503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7731572576573233873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f9b9c52cc8d4bb6a66b74b1256906c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stage: 0
-  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}

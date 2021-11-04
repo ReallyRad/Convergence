@@ -38,6 +38,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        _currentVolume.Value = 0;
+    }
+
     public void PlaySounds()
     {
         if (_experimentStage.trialCount > _experimentStage.mootTrials) 

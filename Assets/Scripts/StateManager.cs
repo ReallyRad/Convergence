@@ -7,7 +7,8 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     [SerializeField] private GameEvent _experimentFinished;
-    [SerializeField] private GameEvent _practiceFinihsed;
+    [SerializeField] private GameEvent _practiceFinished;
+    [SerializeField] private GameEvent _taskFinished;
     [SerializeField] private Response _response;
     [SerializeField] private ExperimentStage _experimentStage;
     private void Awake()
@@ -20,36 +21,39 @@ public class StateManager : MonoBehaviour
     public void TrialDone()
     {
         _experimentStage.trialCount++;
+        _response.response = ResponseValue.none;
+        _response.confidence = 0.5f;    
+        
         if (_experimentStage.practiceRound) //if we are in a practice round
         {
-               //if we reached last trial
-               if (_experimentStage.trialCount < _experimentStage.mootTrials) //if we haven't reached the last trial
-               {
-                   
-               }
-               else //if we reached the last trial of this practice round
-               {
-                   _experimentStage.trialCount = 0;
-                   _experimentStage.practiceRound = false;
-                   _practiceFinihsed.Raise();
-               }
+           //if we reached last trial
+           if (_experimentStage.trialCount < _experimentStage.mootTrials) //if we haven't reached the last trial
+           {
+               _taskFinished.Raise(); //go for another round
+           }
+           else //if we reached the last trial of this practice round
+           {
+               _experimentStage.trialCount = 0;
+               _experimentStage.practiceRound = false;
+               _practiceFinished.Raise(); //invoke task instruction UI once again
+            }
         }
         else //if we are done with practice
         {
-            if (_experimentStage.stage == Stage.offline) //if we are doing offline 
+            if (_experimentStage.stage == Stage.online) //if we are doing online 
             {
                 if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
                 {
-                    _response.response = ResponseValue.none;
-                    _response.confidence = 0.5f;    
+                    _taskFinished.Raise(); //go for another round
                 }
                 else //if we reached the last trials
                 {
-                    _experimentStage.stage = Stage.offline;
+                    _experimentStage.stage = Stage.offline; //switch to offline
+                    _experimentStage.practiceRound = true;
                     _experimentFinished.Raise();
                 }    
             }
-            else //if we are doing online
+            else //if we are doing offline
             {
                 if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
                 {

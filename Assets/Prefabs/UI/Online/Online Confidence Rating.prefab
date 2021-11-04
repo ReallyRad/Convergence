@@ -850,7 +850,6 @@ GameObject:
   - component: {fileID: 983632332490856440}
   - component: {fileID: 3465956565922737284}
   - component: {fileID: 2872578038231952021}
-  - component: {fileID: 7668387609829171683}
   - component: {fileID: 3988726247672003295}
   - component: {fileID: 3221842590758495304}
   m_Layer: 0
@@ -982,38 +981,6 @@ MonoBehaviour:
   _confidenceSlider: {fileID: 2089688939338796442}
   _stage: 0
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
---- !u!114 &7668387609829171683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5088132929925063285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
-  _event: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2872578038231952021}
-        m_TargetAssemblyTypeName: ConfidenceRating, Assembly-CSharp
-        m_MethodName: IntroFinished
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ExperimentStage, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &3988726247672003295
 MonoBehaviour:
   m_ObjectHideFlags: 0
