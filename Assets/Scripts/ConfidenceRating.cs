@@ -10,9 +10,8 @@ public class ConfidenceRating : MonoBehaviour
     [SerializeField] private Response _response;
     [SerializeField] private ObjectGameEvent _OkButtonPressedEvent;
     [SerializeField] private Slider _confidenceSlider;
-
-    private bool _introFinished;
-    
+    [SerializeField] private Stage _stage;
+    [SerializeField] private ExperimentStage _experimentStage;
     private void OnEnable()
     {
         _confidenceSlider.onValueChanged.AddListener(delegate(float value)
@@ -35,12 +34,10 @@ public class ConfidenceRating : MonoBehaviour
 
     public void Reset()
     {
-        if (_introFinished) GetComponent<PanelDimmer>().Show();
-        _confidenceSlider.value = 0.5f;
-    }
-
-    public void IntroFinished()
-    {
-        _introFinished = true;
+        if (_experimentStage.stage == _stage)
+        {
+            GetComponent<PanelDimmer>().Show();
+            _confidenceSlider.value = 0.5f;    
+        }
     }
 }

@@ -15,7 +15,7 @@ public class StateManager : MonoBehaviour
     private void Awake()
     {
         _trialCount.Value = 0;
-        _experimentStage.stage = Stage.offline;
+        _experimentStage.stage = Stage.online;
     }
 
     public void TrialDone()

@@ -150,8 +150,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2555498142971363741}
   - {fileID: 1917184056}
+  - {fileID: 2555498142971363741}
   - {fileID: 1766084433}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -283,10 +283,6 @@ PrefabInstance:
     - target: {fileID: 4890675055097180619, guid: 2480927d952e846ab946d08dea4620f1, type: 3}
       propertyPath: m_Name
       value: Offline Detection
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336764748252953033, guid: 2480927d952e846ab946d08dea4620f1, type: 3}
-      propertyPath: m_Alpha
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2480927d952e846ab946d08dea4620f1, type: 3}
@@ -421,42 +417,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917184056}
     m_Modifications:
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _event
-      value: 
-      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165629056}
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5995733623436999265, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7845835064099404363, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8704789095731769928, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -545,17 +505,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Online Detection
       objectReference: {fileID: 0}
-    - target: {fileID: 8704789095731769929, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
---- !u!1 &1165629056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8704789095731769929, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-  m_PrefabInstance: {fileID: 1165629055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1426099863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8336087286481640243, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
@@ -632,7 +583,7 @@ Transform:
   - {fileID: 5639976028212589255}
   - {fileID: 6803580652733116720}
   m_Father: {fileID: 420026128}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1923870817 stripped
 Transform:
@@ -822,10 +773,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 912647323792068208, guid: 0f72249fcee5540aaa9d77046d41c87c, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3678495709315070100, guid: 0f72249fcee5540aaa9d77046d41c87c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -936,10 +883,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6155419927910049966, guid: 645a99f5a4ede4d429fe0f5b238a441e, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645a99f5a4ede4d429fe0f5b238a441e, type: 3}
 --- !u!1001 &5639976028212589254
@@ -949,10 +892,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917184056}
     m_Modifications:
-    - target: {fileID: 983632332490856440, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3257875765941160834, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1061,6 +1000,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
+      propertyPath: _event
+      value: 
+      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
+    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
+    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ConfidenceRating, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
+    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: ExperimentStage, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
 --- !u!224 &5639976028212589255 stripped
@@ -1079,10 +1042,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Offline Experiment Instructions
       objectReference: {fileID: 0}
-    - target: {fileID: 4821535456390962137, guid: b0f477cfc6eaa45c08b42f1ac905d4ed, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5702895271482379579, guid: b0f477cfc6eaa45c08b42f1ac905d4ed, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1166,10 +1125,6 @@ PrefabInstance:
     - target: {fileID: 5702895271482379579, guid: b0f477cfc6eaa45c08b42f1ac905d4ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6939323287822201278, guid: b0f477cfc6eaa45c08b42f1ac905d4ed, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0f477cfc6eaa45c08b42f1ac905d4ed, type: 3}
@@ -1180,10 +1135,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917184056}
     m_Modifications:
-    - target: {fileID: 2125240576061830237, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3609621632884394200, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1266,10 +1217,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3609621632884394200, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601194732557164090, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
-      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7731572576573233873, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
@@ -1404,26 +1351,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917184056}
     m_Modifications:
-    - target: {fileID: 20735008133504004, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 20735008133504004, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
-    - target: {fileID: 20735008133504004, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Raise
-      objectReference: {fileID: 0}
-    - target: {fileID: 20735008133504004, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ScriptableObjectArchitecture.GameEventBase`1[[UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 20735008133504004, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
     - target: {fileID: 841296579122788955, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
       propertyPath: m_Name
       value: Online Practice Instructions
@@ -1512,10 +1439,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6704236212029280144, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 734ec1a2c504c457096b579c902287f9, type: 3}
 --- !u!224 &7854963177154345201 stripped
@@ -1536,9 +1459,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 440320384}
     m_Modifications:
     - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _event
+      value: 
+      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
+    - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: _previouslyRegisteredEvent
       value: 
-      objectReference: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8336087286481640242, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: m_Name
       value: AudioManager
