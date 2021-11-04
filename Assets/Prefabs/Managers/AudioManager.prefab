@@ -200,8 +200,8 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
-  _event: {fileID: 11400000, guid: 5298d6ebaac394224843638d3bf1339b, type: 2}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 0}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -265,7 +265,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
+  _previouslyRegisteredEvent: {fileID: 0}
   _event: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
   _response:
     m_PersistentCalls:
