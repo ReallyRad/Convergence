@@ -229,9 +229,12 @@ GameObject:
   - component: {fileID: 4890675055097180629}
   - component: {fileID: 6336764748252953033}
   - component: {fileID: 4558233475755173820}
+  - component: {fileID: 6046597203534793030}
   - component: {fileID: 7505155776964770275}
   - component: {fileID: 2987956687410038767}
   - component: {fileID: 2203984890480657448}
+  - component: {fileID: 7793991345921019615}
+  - component: {fileID: 2471716691255271119}
   m_Layer: 5
   m_Name: Offline Detection
   m_TagString: Untagged
@@ -344,6 +347,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef25a7532f744582b19f630b21f7322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6046597203534793030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4890675055097180619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9f1463b69394bff926f75f2d0a2afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 1
+  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &7505155776964770275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,3 +457,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7793991345921019615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4890675055097180619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 8e982eae4bff44e948a8f628b0ea4dc8, type: 2}
+  _event: {fileID: 11400000, guid: 8e982eae4bff44e948a8f628b0ea4dc8, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2471716691255271119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4890675055097180619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9f1463b69394bff926f75f2d0a2afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 0
+  _experimentStage: {fileID: 0}

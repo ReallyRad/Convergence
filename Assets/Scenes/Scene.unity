@@ -1000,30 +1000,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
-      propertyPath: _event
-      value: 
-      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
-    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
-      propertyPath: _previouslyRegisteredEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
-    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ConfidenceRating, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
-    - target: {fileID: 7668387609829171683, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
-      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: ExperimentStage, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3089eba6ebe3d4109966fbc15dd62912, type: 3}
 --- !u!224 &5639976028212589255 stripped
@@ -1223,6 +1199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Online Experiment Instructions '
       objectReference: {fileID: 0}
+    - target: {fileID: 7898865273442778447, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 61c62c3f1b5434b64bde0b13261346f9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab29427f5a994943999e4477c684d2a, type: 3}
 --- !u!224 &6803580652733116720 stripped
@@ -1465,7 +1445,7 @@ PrefabInstance:
     - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: _previouslyRegisteredEvent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
     - target: {fileID: 8336087286481640242, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: m_Name
       value: AudioManager

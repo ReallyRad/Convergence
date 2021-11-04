@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjectArchitecture;
 using UnityEngine;
 
 public class Instructions : MonoBehaviour
@@ -9,6 +10,9 @@ public class Instructions : MonoBehaviour
     
     public void PracticeFinished()
     {
-        if(_experimentStage.stage == _stage) GetComponent<PanelDimmer>().Show();
+        if (_experimentStage.stage == _stage)
+        {
+            GetComponent<PanelDimmer>().Show();
+        }
     }
 }
