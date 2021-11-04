@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 8704789095731769943}
   - component: {fileID: 7845835064099404363}
   - component: {fileID: 310939341025780798}
+  - component: {fileID: 6679243220411320048}
   - component: {fileID: 5995733623436999265}
   - component: {fileID: 1325727736726242413}
   - component: {fileID: 2703448439924639658}
@@ -536,9 +537,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8704789095731769929}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &310939341025780798
 MonoBehaviour:
@@ -552,6 +553,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef25a7532f744582b19f630b21f7322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6679243220411320048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704789095731769929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9f1463b69394bff926f75f2d0a2afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 0
+  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &5995733623436999265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,18 +582,18 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
-  _event: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
+  _event: {fileID: 11400000, guid: 862cec03089c647ad8cd51bc49ed30e7, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310939341025780798}
-        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 1
+      - m_Target: {fileID: 6679243220411320048}
+        m_TargetAssemblyTypeName: Detection, Assembly-CSharp
+        m_MethodName: IntroFinished
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ExperimentStage, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -604,9 +619,9 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310939341025780798}
-        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
-        m_MethodName: Hide
+      - m_Target: {fileID: 6679243220411320048}
+        m_TargetAssemblyTypeName: Detection, Assembly-CSharp
+        m_MethodName: AudioFinished
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

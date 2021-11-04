@@ -114,9 +114,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315225374914587119}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &5006509932086216859
 MonoBehaviour:
@@ -144,7 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _OkButtonPressedEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
-  _confidenceSlider: {fileID: 0}
+  _confidenceSlider: {fileID: 8111999312324204928}
+  _stage: 1
 --- !u!114 &3084603213276139885
 MonoBehaviour:
   m_ObjectHideFlags: 0
