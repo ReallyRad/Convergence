@@ -7,11 +7,11 @@ public class Detection : MonoBehaviour
     public Stage stage;
     [SerializeField] private ExperimentStage _experimentStage;
     
-    public void IntroFinished(ExperimentStage experimentStage)
+    public void ReadyToShow()
     {
-        if (stage == experimentStage.stage)
+        if (stage == _experimentStage.stage)
         {
-            GetComponent<PanelDimmer>().Show();
+            GetComponent<PanelDimmer>().Show(); 
         }
     }
 
