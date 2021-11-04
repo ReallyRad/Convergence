@@ -7,8 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _noiseSource;
     [SerializeField] private AudioSource _stimulusSource;
-    [SerializeField] private IntVariable _trialCount;
-    [SerializeField] private IntVariable _mootTrials;
+    [SerializeField] private ExperimentStage _experimentStage;
     [SerializeField] private FloatVariable _currentVolume;
     [SerializeField] private Response _response;
     [SerializeField] private AudioMixer _mixer;
@@ -41,7 +40,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySounds()
     {
-        if (_trialCount.Value > _mootTrials.Value) 
+        if (_experimentStage.trialCount > _experimentStage.mootTrials) 
         {
             var randomVal = UnityEngine.Random.Range(0f, 1f);
             
@@ -69,7 +68,7 @@ public class AudioManager : MonoBehaviour
     
     public void OkButtonPressed()
     {
-        if (_response.response == ResponseValue.yes && _trialCount >= _mootTrials.Value)
+        if (_response.response == ResponseValue.yes &&  _experimentStage.trialCount >= _experimentStage.mootTrials)
         {
             _currentVolume.Value -= _volumeIncrements;
             _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
