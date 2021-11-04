@@ -5,7 +5,7 @@ using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DiscriminationTask : MonoBehaviour
+public class ConfidenceRating : MonoBehaviour
 {
     [SerializeField] private Response _response;
     [SerializeField] private ObjectGameEvent _OkButtonPressedEvent;
