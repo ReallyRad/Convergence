@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 3988726247672003295}
   - component: {fileID: 3221842590758495304}
   m_Layer: 0
-  m_Name: Confidence Rating
+  m_Name: Online Confidence Rating
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -949,7 +949,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5088132929925063285}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -995,8 +995,8 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
-  _event: {fileID: 11400000, guid: e2bb523e2c47a42899aca075256bec41, type: 2}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 0}
   _response:
     m_PersistentCalls:
       m_Calls:

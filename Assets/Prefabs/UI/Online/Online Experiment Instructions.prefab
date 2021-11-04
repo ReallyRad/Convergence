@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 4601194732557164090}
   - component: {fileID: 8013113677714647653}
   m_Layer: 0
-  m_Name: Online Main Experiment Instructions
+  m_Name: Online Experiment Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
