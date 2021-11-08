@@ -537,10 +537,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\n\n\nIn the main experiment there are 2 longer blocks of trials. The
-    melody will be played at or near perceptual threshold, but it will still appear
-    50% of the time. \n\nRemember to always press \"B\", as soon as you hear the
-    melody. \t"
+  m_text: '
+
+
+
+
+
+    In the main experiment there are 2 longer blocks of trials.
+    The melody will be played at or near perceptual threshold, but it will still
+    appear 50% of the time. If there is a melody, press "Y". If there is no melody,
+    press "N", as soon as the noise stops.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
@@ -574,7 +580,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 16
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
