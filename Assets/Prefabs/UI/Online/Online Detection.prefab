@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 6679243220411320048}
   - component: {fileID: 5995733623436999265}
   - component: {fileID: 1325727736726242413}
+  - component: {fileID: 3107629983712271457}
   m_Layer: 5
   m_Name: Online Detection
   m_TagString: Untagged
@@ -621,6 +622,38 @@ MonoBehaviour:
       - m_Target: {fileID: 6679243220411320048}
         m_TargetAssemblyTypeName: Detection, Assembly-CSharp
         m_MethodName: AudioFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3107629983712271457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704789095731769929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6679243220411320048}
+        m_TargetAssemblyTypeName: Detection, Assembly-CSharp
+        m_MethodName: ReadyToShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 0
   practiceRound: 0
-  trialCount: 10
+  trialCount: 0
   mootTrials: 4
   numberOfTrials: 10

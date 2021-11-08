@@ -26,7 +26,6 @@ public class StateManager : MonoBehaviour
         
         if (_experimentStage.practiceRound) //if we are in a practice round
         {
-           //if we reached last trial
            if (_experimentStage.trialCount < _experimentStage.mootTrials) //if we haven't reached the last trial
            {
                _trialDone.Raise(); //go for another round
@@ -46,7 +45,7 @@ public class StateManager : MonoBehaviour
                 {
                     _trialDone.Raise(); //go for another round
                 }
-                else //if we reached the last trials
+                else //if we reached the last online trial, switch to offline
                 {
                     _experimentStage.trialCount = 0;
                     _experimentStage.stage = Stage.offline; //switch to offline
@@ -58,7 +57,11 @@ public class StateManager : MonoBehaviour
             {
                 if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
                 {
-                    
+                    _trialDone.Raise(); //go for another round
+                }
+                else //if we reached the last trials
+                {
+                   var x = 4;
                 }
             }
 
