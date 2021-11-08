@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    [SerializeField] private GameEvent _experimentFinished;
+    [SerializeField] private GameEvent _firstExperimentFinished;
+    [SerializeField] private GameEvent _secondExperimentFinished;
     [SerializeField] private GameEvent _practiceFinished;
     [SerializeField] private GameEvent _trialDone;
     [SerializeField] private Response _response;
@@ -50,7 +51,7 @@ public class StateManager : MonoBehaviour
                     _experimentStage.trialCount = 0;
                     _experimentStage.stage = Stage.offline; //switch to offline
                     _experimentStage.practiceRound = true;
-                    _experimentFinished.Raise();
+                    _firstExperimentFinished.Raise();
                 }    
             }
             else //if we are doing offline
@@ -61,7 +62,7 @@ public class StateManager : MonoBehaviour
                 }
                 else //if we reached the last trials
                 {
-                   var x = 4;
+                   _secondExperimentFinished.Raise();
                 }
             }
 

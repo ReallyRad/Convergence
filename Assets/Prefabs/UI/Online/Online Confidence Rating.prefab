@@ -851,7 +851,6 @@ GameObject:
   - component: {fileID: 3465956565922737284}
   - component: {fileID: 2872578038231952021}
   - component: {fileID: 3988726247672003295}
-  - component: {fileID: 3221842590758495304}
   m_Layer: 0
   m_Name: Online Confidence Rating
   m_TagString: Untagged
@@ -1004,38 +1003,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2872578038231952021}
         m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
         m_MethodName: Reset
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &3221842590758495304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5088132929925063285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
-  _event: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3465956565922737284}
-        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
-        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
