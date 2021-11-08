@@ -72,7 +72,7 @@ public class AudioManager : MonoBehaviour
     
     public void OkButtonPressed()
     {
-        if (_response.response == ResponseValue.yes &&  _experimentStage.trialCount >= _experimentStage.mootTrials)
+        if (_response.response == ResponseValue.yes &&  _experimentStage.trialCount >= _experimentStage.mootTrials) //TODO fix
         {
             _currentVolume.Value -= _volumeIncrements;
             _mixer.SetFloat("StimulusVolume", _currentVolume.Value);

@@ -36,7 +36,7 @@ public class StateManager : MonoBehaviour
                _experimentStage.trialCount = 0;
                _experimentStage.practiceRound = false;
                _practiceFinished.Raise(); //invoke task instruction UI once again
-            }
+           }
         }
         else //if we are done with practice
         {
