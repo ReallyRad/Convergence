@@ -32,7 +32,8 @@ public class AudioManager : MonoBehaviour
                 _audioFinishedEvent.Raise();
             }
             _audioPlaying = false;
-        } else if (_stimulusSource.isPlaying)
+        } 
+        else if (_stimulusSource.isPlaying)
         {
             _audioPlaying = true;
         }
@@ -41,6 +42,7 @@ public class AudioManager : MonoBehaviour
     public void Reset()
     {
         _currentVolume.Value = 0;
+        _response.responseTime = 0;
     }
 
     public void PlaySounds()
@@ -72,11 +74,12 @@ public class AudioManager : MonoBehaviour
     
     public void OkButtonPressed()
     {
-        if (_response.response == ResponseValue.yes &&  _experimentStage.trialCount >= _experimentStage.mootTrials) //TODO fix
+        if (_response.response == ResponseValue.yes &&  !_experimentStage.practiceRound)
         {
             _currentVolume.Value -= _volumeIncrements;
             _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
         }
         PlaySounds();
     }
+
 }

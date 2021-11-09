@@ -65,9 +65,6 @@ public class StateManager : MonoBehaviour
                    _secondExperimentFinished.Raise();
                 }
             }
-
         }
-        
     }
-    
 }

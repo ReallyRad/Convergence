@@ -142,7 +142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Listen...\n\n\n\n   Press \"B\" when you hear the melody. \n"
+  m_text: "Listen...\n\n\n\nPress \"B\" when you hear the melody. \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
@@ -567,6 +567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 0
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
+  _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
+  _text: {fileID: 5387404275751821275}
 --- !u!114 &5995733623436999265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,7 +648,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
   _event: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
   _response:
     m_PersistentCalls:

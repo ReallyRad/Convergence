@@ -197,10 +197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1766084433}
     m_Modifications:
-    - target: {fileID: 3263441417841876118, guid: 2480927d952e846ab946d08dea4620f1, type: 3}
-      propertyPath: _previouslyRegisteredEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
     - target: {fileID: 4890675055097180618, guid: 2480927d952e846ab946d08dea4620f1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -452,10 +448,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917184056}
     m_Modifications:
-    - target: {fileID: 3107629983712271457, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
-      propertyPath: _previouslyRegisteredEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
     - target: {fileID: 8704789095731769928, guid: 5320bd83c5c504046a8f20fe83f32836, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1649,6 +1641,14 @@ PrefabInstance:
     - target: {fileID: 8336087286481640243, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _volumeIncrements
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _probabilityCutoff
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
