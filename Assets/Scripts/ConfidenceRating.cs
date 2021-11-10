@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class ConfidenceRating : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class ConfidenceRating : MonoBehaviour
     [SerializeField] private Slider _confidenceSlider;
     [SerializeField] private Stage _stage;
     [SerializeField] private ExperimentStage _experimentStage;
+    private Stopwatch _stopwatch;
+
     private void OnEnable()
     {
         _confidenceSlider.onValueChanged.AddListener(delegate(float value)
@@ -20,9 +24,20 @@ public class ConfidenceRating : MonoBehaviour
         });
     }
 
+    private void Awake()
+    {
+        _stopwatch = new Stopwatch();
+    }
+
     public void OKButtonPressed()
     {
         _response.responseTime = 0;
+        if (_stage == Stage.offline)
+        {
+            _stopwatch.Stop();
+            Debug.Log( "Time to answer :" + _stopwatch.ElapsedMilliseconds);
+            _stopwatch.Reset();
+        }
         GetComponent<PanelDimmer>().Hide();
         _OkButtonPressedEvent.Raise();
     }
@@ -37,6 +52,8 @@ public class ConfidenceRating : MonoBehaviour
     {
         if (_experimentStage.stage == _stage)
         {
+            if (_stage == Stage.offline) 
+                _stopwatch.Start();
             GetComponent<PanelDimmer>().Show();
             _confidenceSlider.value = 0.5f;    
         }

@@ -28,7 +28,11 @@ public class Detection : MonoBehaviour
         if (stage == _experimentStage.stage)
         {
             GetComponent<PanelDimmer>().Show();
-            _text.text ="Listen...\n\n\n\n  Press \"B\" when you hear the melody";
+            if (stage == Stage.offline)
+                _text.text ="Listen...";
+            else if (stage == Stage.online)
+                _text.text ="Listen...\n\n\n\n  Press \"B\" when you hear the melody";
+
             _response.response = ResponseValue.none;
             if (_experimentStage.stage == Stage.online)
             {

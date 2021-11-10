@@ -377,9 +377,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
-        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
-        m_MethodName: Raise
+      - m_Target: {fileID: 5006509932086216859}
+        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -389,9 +389,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5006509932086216859}
-        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
-        m_MethodName: Hide
+      - m_Target: {fileID: 9043064395575720629}
+        m_TargetAssemblyTypeName: ConfidenceRating, Assembly-CSharp
+        m_MethodName: OKButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
