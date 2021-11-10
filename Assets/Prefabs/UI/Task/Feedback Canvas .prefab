@@ -439,7 +439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4fcc2e0d285b84991b339daabfc7ac29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d0cbff59e00b4eccb4c481df5bf6afb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -514,8 +514,34 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\nHits (TP):\nFalse Alarms (FP):\n Corr. Rej. (TN)\nMisses (FN):\nMean
-    Reaction Time:\nMean Confidence: "
+  m_text: '
+
+    
+
+
+    Online Detected Hits:
+
+    Online False Alarms:
+
+    Online
+    Corr. Rej.:
+
+    Online Misses:
+
+    
+
+    
+
+    Offline Detected Hits:
+
+    Offline
+    False Alarms:
+
+    Offline Corr. Rej.:
+
+    Offline Misses:
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
