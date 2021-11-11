@@ -1,13 +1,15 @@
 ﻿using System;
 using UnityEngine;
 public enum ResponseValue {yes, no, none}
+public enum ResponseType {truePositive, trueNegative, falsePositive, falseNegative, none}
 
-[CreateAssetMenu]
+[CreateAssetMenu] [Serializable]
 public class Response : ScriptableObject
 {
     public ResponseValue response;
     public float confidence;
-    public float responseTime;
+    public int responseTime;
+    public ResponseType responseType;
     
     private void OnEnable()
     {

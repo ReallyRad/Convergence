@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7723583213136056276}
   - component: {fileID: 7723583213136056277}
   - component: {fileID: 7723583213136056278}
+  - component: {fileID: 3862283587975677315}
   m_Layer: 0
   m_Name: FirebaseManager
   m_TagString: Untagged
@@ -66,11 +67,43 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7723583213136056277}
         m_TargetAssemblyTypeName: FirebaseManager, Assembly-CSharp
-        m_MethodName: OnTaskOKButtonPressed
+        m_MethodName: SubmitToDatabase
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
           m_ObjectArgumentAssemblyTypeName: Response, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3862283587975677315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7723583213136056267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
+  _event: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7723583213136056277}
+        m_TargetAssemblyTypeName: FirebaseManager, Assembly-CSharp
+        m_MethodName: RetrieveFromDatabase
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
