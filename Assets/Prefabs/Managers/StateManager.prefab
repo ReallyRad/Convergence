@@ -66,13 +66,13 @@ MonoBehaviour:
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
   _previouslyRegisteredEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
-  _event: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
+  _event: {fileID: 11400000, guid: d548a4580c5424158b5ffba736420bfe, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7809964100416283204}
         m_TargetAssemblyTypeName: StateManager, Assembly-CSharp
-        m_MethodName: TrialDone
+        m_MethodName: TaskOkButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

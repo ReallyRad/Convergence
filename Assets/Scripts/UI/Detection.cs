@@ -33,7 +33,6 @@ public class Detection : MonoBehaviour
             else if (stage == Stage.online)
                 _text.text ="Listen...\n\n\n\n  Press \"B\" when you hear the melody";
 
-            _response.response = ResponseValue.none;
             if (_experimentStage.stage == Stage.online)
             {
                 _stopwatch.Start();

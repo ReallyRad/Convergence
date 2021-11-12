@@ -10,11 +10,4 @@ public class Response : ScriptableObject
     public float confidence;
     public int responseTime;
     public ResponseType responseType;
-    
-    private void OnEnable()
-    {
-        response = ResponseValue.none;
-        confidence = 0.5f;
-        responseTime = 0;
-    }
 }

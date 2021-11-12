@@ -31,7 +31,6 @@ public class ConfidenceRating : MonoBehaviour
 
     public void OKButtonPressed()
     {
-        _response.responseTime = 0;
         if (_stage == Stage.offline)
         {
             _stopwatch.Stop();
@@ -40,6 +39,7 @@ public class ConfidenceRating : MonoBehaviour
         }
         GetComponent<PanelDimmer>().Hide();
         _OkButtonPressedEvent.Raise();
+        _response.responseTime = 0;
     }
 
     public void MelodyThere(bool there)
