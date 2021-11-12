@@ -9,6 +9,7 @@ public class FirebaseManager : MonoBehaviour
 {
   private string playerName;
   [SerializeField] private GameEvent _responseLogged;
+  [SerializeField] private ExperimentStage _experimentStage;
   private int responseIndex;
   private List<Response> _responses;
   
@@ -20,9 +21,17 @@ public class FirebaseManager : MonoBehaviour
 
   public void SubmitToDatabase(Response response)
   {
-    _responses.Add(response);
-    RestClient.Put("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/"+ playerName + "/posts/" + responseIndex + ".json", response);
-    responseIndex++;
+    if (!_experimentStage.practiceRound)
+    {
+      _responses.Add(response);
+      RestClient.Put("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/" 
+                     + playerName + "/" 
+                     + _experimentStage.stage + "/"
+                     + "/responses/" 
+                     + responseIndex 
+                     + ".json", response);
+      responseIndex++;  
+    }
     _responseLogged.Raise();
   }
 
