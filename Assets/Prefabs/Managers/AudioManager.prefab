@@ -182,8 +182,8 @@ MonoBehaviour:
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _mixer: {fileID: 24100000, guid: e965036173f5c46f490a586675e5ff49, type: 2}
   _audioFinishedEvent: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
-  _probabilityCutoff: 0.33
-  _volumeIncrements: 1
+  _probabilityCutoff: 0.6
+  _volumeIncrements: 10
 --- !u!114 &2550021154844234743
 MonoBehaviour:
   m_ObjectHideFlags: 0

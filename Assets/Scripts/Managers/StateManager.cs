@@ -19,7 +19,7 @@ public class StateManager : MonoBehaviour
         _experimentStage.practiceRound = true;
     }
 
-    public void TaskOkButtonPressed()
+    public void ResponseLogged()
     {
         _experimentStage.trialCount++;
         _response.response = ResponseValue.none;

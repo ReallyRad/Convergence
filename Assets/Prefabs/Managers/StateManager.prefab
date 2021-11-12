@@ -72,7 +72,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7809964100416283204}
         m_TargetAssemblyTypeName: StateManager, Assembly-CSharp
-        m_MethodName: TaskOkButtonPressed
+        m_MethodName: ResponseLogged
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
