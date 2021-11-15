@@ -385,7 +385,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Auditory Reality Discrimination
+    Offline Auditory Reality Discrimination
 
 
 
@@ -675,9 +675,9 @@ MonoBehaviour:
 
 
     In this experiment you will listen for a melody in briefly presented
-    noise. If there is a melody, press "Y";. If there is no melody, press "N" as
-    soon as the noise stops. After each trial rate the confidence of whether you
-    have detected the melody or not. There are 4 practice blocks. The first two blocks
+    noise. If there is a melody, press "Y". If there is no melody, press "N" as soon
+    as the noise stops. After each trial rate the confidence of whether you have
+    detected the melody or not. There are 4 practice blocks. The first two blocks
     will be the easiest, to demonstrate what the melody sounds like. The melody will
     become increasingly more difficult to perceive over time. The melody will always
     appear on 50% of trials, randomly mixed within a block.'
