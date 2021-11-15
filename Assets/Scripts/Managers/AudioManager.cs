@@ -45,10 +45,38 @@ public class AudioManager : MonoBehaviour
         _response.responseTime = 0;
     }
 
-    public void PlaySounds()
+    public void PlaySound(int sound)
     {
-        if (_experimentStage.trialCount > _experimentStage.mootTrials) 
+        if (sound == 1) _noiseSource.Play();
+        if (sound == 2) _stimulusSource.Play();
+    }
+    
+    public void OkButtonPressed(Response response)
+    {
+        if (!_experimentStage.practiceRound)
         {
+            if (response.response == ResponseValue.yes && _stimulusSource.volume == 1f) //true positive 
+            {
+                _currentVolume.Value -= _volumeIncrements; //decrement
+                _response.responseType = ResponseType.truePositive;
+            } 
+            else if (response.response == ResponseValue.no || _response.response == ResponseValue.none && _stimulusSource.volume == 1f) //false negative
+            {
+                _currentVolume.Value += _volumeIncrements; //decrement
+                _response.responseType = ResponseType.falseNegative;
+            } 
+            else if (response.response == ResponseValue.yes && _stimulusSource.volume != 1f) //false positive
+            {
+                _response.responseType = ResponseType.falsePositive;
+            } 
+            else if (response.response == ResponseValue.no || _response.response == ResponseValue.none && _stimulusSource.volume != 1f) //true negative
+            {
+                _currentVolume.Value += _volumeIncrements;
+                response.responseType = ResponseType.trueNegative;
+            }
+        
+            _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
+        
             var randomVal = UnityEngine.Random.Range(0f, 1f); //pick a random number between 0 and 1
             
             if (randomVal <= _probabilityCutoff) //1 in probablalityCutoff times, play both sounds 
@@ -62,41 +90,12 @@ public class AudioManager : MonoBehaviour
                 _stimulusSource.volume = 0f;
             }
         }
+
+        _response.response = ResponseValue.none;
+        _response.confidence = 0.5f;    
+
         _noiseSource.Play();
         _stimulusSource.Play();    
-    }
-
-    public void PlaySound(int sound)
-    {
-        if (sound == 1) _noiseSource.Play();
-        if (sound == 2) _stimulusSource.Play();
-    }
-    
-    public void OkButtonPressed(Response response)
-    {
-        Debug.Log("AudioManager");
-        if (!_experimentStage.practiceRound)
-        {
-            if (response.response == ResponseValue.yes && _stimulusSource.volume == 1f) //true positive 
-            {
-                _currentVolume.Value -= _volumeIncrements; //decrement
-                _response.responseType = ResponseType.truePositive;
-            } else if (response.response == ResponseValue.no || _response.response == ResponseValue.none && _stimulusSource.volume == 1f) //false negative
-            {
-                _currentVolume.Value += _volumeIncrements; //decrement
-                _response.responseType = ResponseType.falseNegative;
-            } else if (response.response == ResponseValue.yes && _stimulusSource.volume != 1f) //false positive
-            {
-                _response.responseType = ResponseType.falsePositive;
-            } else if (response.response == ResponseValue.no || _response.response == ResponseValue.none && _stimulusSource.volume != 1f) //true negative
-            {
-                _currentVolume.Value += _volumeIncrements;
-                response.responseType = ResponseType.trueNegative;
-            }
-        }
-        
-        _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
-        PlaySounds();
     }
 
 }

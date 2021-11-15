@@ -22,8 +22,6 @@ public class StateManager : MonoBehaviour
     public void ResponseLogged()
     {
         _experimentStage.trialCount++;
-        _response.response = ResponseValue.none;
-        _response.confidence = 0.5f;    
         
         if (_experimentStage.practiceRound) //if we are in a practice round
         {
