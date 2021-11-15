@@ -1,13 +1,23 @@
 TODO
-- Firebaase backend for Signal Detection Measures (Nr of TP, FP, TN, FN) RT (duration for decision) with https://github.com/rotolonico/FirebaseWebGL
-- Stop the Test after 15x presenting noise only
+- Firebaase backend for Signal Detection Measures (Nr of TP, FP, TN, FN) RT (duration for decision) 
 - First have large steps, then use 1DB steps – maybe like here in Ableton:
-- predefined 
-- adjust the probaility of showing the Noise only file, and the 1 Up/1Down algorithm.
 - on end screen show the signal detection values
 - the number of tp, fp, tn, fn, mean reaction tiems, mean confidence ratings 
+- reimplement volume decrease
+- randomise order of online and offline
+
+tp : decrease
+fn : increase
+fp : do nothing
+tn : increase
 
 DONE 
+- log answers for online and offline 
+- Stop the Test after 15x presenting noise only
+- see if better to implmeent firebase before feedback screen
+- check if OK to have confidence response in timer when doing offline rating.
+- adjust the probaility of showing the Noise only file, and the 1 Up/1Down algorithm.
+- audio decrease logic
 - GUI flow
 - end screen 
 - Confidence Rating (VAS)
