@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
                 _currentVolume.Value -= _volumeIncrements; //decrement
                 _response.responseType = ResponseType.truePositive;
             } 
-            else if (response.response == ResponseValue.no || _response.response == ResponseValue.none && _stimulusSource.volume == 1f) //false negative
+            else if ((response.response == ResponseValue.no || _response.response == ResponseValue.none) && _stimulusSource.volume == 1f) //false negative
             {
                 _currentVolume.Value += _volumeIncrements; //decrement
                 _response.responseType = ResponseType.falseNegative;
@@ -71,7 +71,6 @@ public class AudioManager : MonoBehaviour
             } 
             else if (response.response == ResponseValue.no || _response.response == ResponseValue.none && _stimulusSource.volume != 1f) //true negative
             {
-                _currentVolume.Value += _volumeIncrements;
                 response.responseType = ResponseType.trueNegative;
             }
         
