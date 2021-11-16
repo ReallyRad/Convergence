@@ -1,3 +1,9 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[Serializable]
 public class Statistics
 {
 	public int truePositiveCount;
@@ -6,5 +12,4 @@ public class Statistics
 	public int falseNegativeCount;
 	public float meanReactionTime;
 	public float meanConfidenceRating;
-
 }	

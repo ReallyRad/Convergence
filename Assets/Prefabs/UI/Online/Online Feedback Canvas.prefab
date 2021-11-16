@@ -69,16 +69,6 @@ MonoBehaviour:
 
 
 
-    Online Detected Hits:
-
-    Online False Alarms:
-
-    Online Corr.
-    Rej.:
-
-    Online Misses:
-
-
 
     Offline Detected Hits:
 
@@ -384,9 +374,10 @@ GameObject:
   - component: {fileID: 6779653550282094951}
   - component: {fileID: 7159038830276749714}
   - component: {fileID: 4766402080981090478}
-  - component: {fileID: 998836769415286568}
+  - component: {fileID: 474051482}
+  - component: {fileID: 8592241737653116089}
   m_Layer: 5
-  m_Name: 'Feedback Canvas '
+  m_Name: Online Feedback Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +472,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6779653550282094969}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -497,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef25a7532f744582b19f630b21f7322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &998836769415286568
+--- !u!114 &474051482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -506,21 +497,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 6779653550282094969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Script: {fileID: 11500000, guid: f26c9adb9808a4f0193fff04c173ace9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _feedbackText: {fileID: 7789066604525196523}
+  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
+  _stage: 0
+--- !u!114 &8592241737653116089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779653550282094969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbc090bd22cb4bfa90ded16ae9ce845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
-  _event: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: ff4aba7d13d824ffb82e562fdf1db061, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4766402080981090478}
-        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 1
+      - m_Target: {fileID: 474051482}
+        m_TargetAssemblyTypeName: FeedbackPanel, Assembly-CSharp
+        m_MethodName: StatisticsAvailable
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -529,6 +535,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _debugValue:
+    truePositiveCount: 0
+    falsePositiveCount: 0
+    trueNegativeCount: 0
+    falseNegativeCount: 0
+    meanReactionTime: 0
+    meanConfidenceRating: 0
 --- !u!1 &7803419731448762850
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,12 +608,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 453ac56f083cd4ebb95ceec5a07c872a, type: 3}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: 289d9a0ac0d5c45b6a754c37f16e2b29, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 4
+    m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -626,7 +639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3855190765190042835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -644,8 +657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 140, y: 50}
+  m_AnchoredPosition: {x: 0, y: 160}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8163064747467895038
 CanvasRenderer:
@@ -729,9 +742,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
-        m_MethodName: OKButtonPressed
+      - m_Target: {fileID: 4766402080981090478}
+        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: ba30c9a93bc974749b53760fc37cf905, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474051482}
+        m_TargetAssemblyTypeName: FeedbackPanel, Assembly-CSharp
+        m_MethodName: OkButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

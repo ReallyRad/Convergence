@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _responseLogged: {fileID: 11400000, guid: d548a4580c5424158b5ffba736420bfe, type: 2}
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
+  _statisticsAvailable: {fileID: 11400000, guid: ff4aba7d13d824ffb82e562fdf1db061, type: 2}
 --- !u!114 &7723583213136056278
 MonoBehaviour:
   m_ObjectHideFlags: 0

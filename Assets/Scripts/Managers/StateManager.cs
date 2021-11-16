@@ -47,7 +47,6 @@ public class StateManager : MonoBehaviour
                 else //if we reached the last online trial, switch to offline
                 {
                     _experimentStage.trialCount = 0;
-                    _experimentStage.stage = Stage.offline; //switch to offline
                     _experimentStage.practiceRound = true;
                     _firstExperimentFinished.Raise();
                 }    

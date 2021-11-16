@@ -10,6 +10,7 @@ public class FirebaseManager : MonoBehaviour
   private string playerName;
   [SerializeField] private GameEvent _responseLogged;
   [SerializeField] private ExperimentStage _experimentStage;
+  [SerializeField] private StatisticsGameEvent _statisticsAvailable;
   private int responseIndex;
   private List<Response> _responses;
   
@@ -69,7 +70,10 @@ public class FirebaseManager : MonoBehaviour
 
       statistics.meanReactionTime =  statistics.meanReactionTime  / i;
       statistics.meanConfidenceRating = statistics.meanConfidenceRating / i;
+      
+      _statisticsAvailable.Raise(statistics);
     });
+    
   }
   
 }

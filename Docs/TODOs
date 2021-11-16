@@ -1,17 +1,17 @@
 TODO
-- Firebaase backend for Signal Detection Measures (Nr of TP, FP, TN, FN) RT (duration for decision) 
 - First have large steps, then use 1DB steps – maybe like here in Ableton:
 - on end screen show the signal detection values
 - the number of tp, fp, tn, fn, mean reaction tiems, mean confidence ratings 
-- reimplement volume decrease
 - randomise order of online and offline
-
-tp : decrease
-fn : increase
-fp : do nothing
-tn : increase
+- merge online and offline in same rating. use the offline rating to decide the volume change.
+- log how many trial were with and without stimulus
+- change the volume in practice as well. do -5dB every time 
+- don't inclue response time in trials where there is no sound for the average response time calculation
+- set initial volume as serialized parameter so it can be adjusted
 
 DONE 
+- reimplement volume decrease
+- Firebaase backend for Signal Detection Measures (Nr of TP, FP, TN, FN) RT (duration for decision) 
 - log answers for online and offline 
 - Stop the Test after 15x presenting noise only
 - see if better to implmeent firebase before feedback screen
@@ -27,3 +27,8 @@ DONE
 - disable OK button 
 - First 5 Trials without 33% Noise probability
 
+
+
+[{"confidence":0.7825520634651184,"response":0,"responseTime":5033,"responseType":1},
+ {"confidence":0.7434895634651184,"response":0,"responseTime":6590,"responseType":0},
+ {"confidence":0.6393229365348816,"response":0,"responseTime":6369,"responseType":0},{"confidence":0.6888020634651184,"response":1,"responseTime":0,"responseType":0},{"confidence":0.6822916269302368,"response":0,"responseTime":4447,"responseType":1}]
