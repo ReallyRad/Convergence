@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Proyecto26;
 using ScriptableObjectArchitecture;
 using UnityEngine;
-
+using System.Linq;
 public class FirebaseManager : MonoBehaviour
 {
   private string playerName;
@@ -37,9 +37,38 @@ public class FirebaseManager : MonoBehaviour
 
   public void RetrieveFromDatabase()
   {
-    RestClient.Get<ResponseData>("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/" + playerName + ".json").Then(response =>
+    //count the number of tp, fp, tn, fn, mean reaction tiems, mean confidence ratings 
+
+    RestClient.Get("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/" + playerName + "/online/responses.json").Then(response =>
     {
-      ResponseData user = response;
+      Statistics statistics = new Statistics();
+      int i = 0;
+      foreach (ResponseData responseData in JsonHelper.ArrayFromJson<ResponseData>(response.Text))
+      {
+        switch (responseData.responseType)
+        {
+          case ResponseType.falseNegative:
+            statistics.falseNegativeCount++;
+            break;
+          case ResponseType.falsePositive:
+            statistics.falsePositiveCount++;
+            break;
+          case ResponseType.trueNegative:
+            statistics.trueNegativeCount++;
+            break;
+          case ResponseType.truePositive:
+            statistics.truePositiveCount++;
+            break;
+        }
+
+        statistics.meanReactionTime += responseData.responseTime;
+        statistics.meanConfidenceRating += responseData.confidence;
+
+        i++;
+      }
+
+      statistics.meanReactionTime =  statistics.meanReactionTime  / i;
+      statistics.meanConfidenceRating = statistics.meanConfidenceRating / i;
     });
   }
   
