@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1615,6 +1615,34 @@ PrefabInstance:
       propertyPath: _previouslyRegisteredEvent
       value: 
       objectReference: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
+    - target: {fileID: 2550021154844234743, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550021154844234743, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
+    - target: {fileID: 2550021154844234743, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Response, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OkButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
+    - target: {fileID: 4969286282562237205, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Response, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8336087286481640242, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: m_Name
       value: AudioManager

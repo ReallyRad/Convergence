@@ -199,7 +199,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
   _event: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
   _response:
     m_PersistentCalls:
@@ -207,10 +207,10 @@ MonoBehaviour:
       - m_Target: {fileID: 8336087286481640254}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: OkButtonPressed
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Response, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -238,11 +238,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8336087286481640254}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlaySounds
-        m_Mode: 1
+        m_MethodName: OkButtonPressed
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Response, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
