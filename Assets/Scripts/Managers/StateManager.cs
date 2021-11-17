@@ -15,7 +15,6 @@ public class StateManager : MonoBehaviour
     private void Awake()
     {
         _experimentStage.trialCount = 0;
-        _experimentStage.stage = Stage.online;
         _experimentStage.practiceRound = true;
     }
 
@@ -38,8 +37,8 @@ public class StateManager : MonoBehaviour
         }
         else //if we are done with practice
         {
-            if (_experimentStage.stage == Stage.online) //if we are doing online 
-            {
+            //if (_experimentStage.stage == Stage.online) //if we are doing online 
+            //{
                 if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
                 {
                     _trialDone.Raise(); //go for another round
@@ -50,9 +49,9 @@ public class StateManager : MonoBehaviour
                     _experimentStage.practiceRound = true;
                     _firstExperimentFinished.Raise();
                 }    
-            }
-            else //if we are doing offline
-            {
+            //}
+            //else //if we are doing offline
+            //{
                 if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
                 {
                     _trialDone.Raise(); //go for another round
@@ -61,7 +60,7 @@ public class StateManager : MonoBehaviour
                 {
                    _secondExperimentFinished.Raise();
                 }
-            }
+            //}
         }
     }
 }

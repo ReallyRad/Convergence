@@ -12,7 +12,6 @@ public class ConfidenceRating : MonoBehaviour
     [SerializeField] private Response _response;
     [SerializeField] private ObjectGameEvent _OkButtonPressedEvent;
     [SerializeField] private Slider _confidenceSlider;
-    [SerializeField] private Stage _stage;
     [SerializeField] private ExperimentStage _experimentStage;
     private Stopwatch _stopwatch;
 
@@ -31,12 +30,12 @@ public class ConfidenceRating : MonoBehaviour
 
     public void OKButtonPressed()
     {
-        if (_stage == Stage.offline)
-        {
+        //if (_stage == Stage.offline)
+        //{
             _stopwatch.Stop();
             Debug.Log( "Time to answer :" + _stopwatch.ElapsedMilliseconds);
             _stopwatch.Reset();
-        }
+        //}
         GetComponent<PanelDimmer>().Hide();
         _OkButtonPressedEvent.Raise();
         _response.responseTime = 0;
@@ -50,12 +49,8 @@ public class ConfidenceRating : MonoBehaviour
 
     public void Reset()
     {
-        if (_experimentStage.stage == _stage)
-        {
-            if (_stage == Stage.offline) 
-                _stopwatch.Start();
-            GetComponent<PanelDimmer>().Show();
-            _confidenceSlider.value = 0.5f;    
-        }
+        _stopwatch.Start();
+        GetComponent<PanelDimmer>().Show();
+        _confidenceSlider.value = 0.5f;    
     }
 }

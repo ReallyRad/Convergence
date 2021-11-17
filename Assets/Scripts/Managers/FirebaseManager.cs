@@ -26,8 +26,8 @@ public class FirebaseManager : MonoBehaviour
     {
       _responses.Add(response);
       RestClient.Put("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/" 
-                     + playerName + "/" 
-                     + _experimentStage.stage + "/"
+                     + playerName
+                     //+ _experimentStage.stage + "/"
                      + "/responses/" 
                      + responseIndex 
                      + ".json", response);
