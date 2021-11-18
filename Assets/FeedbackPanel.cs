@@ -6,7 +6,6 @@ using UnityEngine;
 public class FeedbackPanel : MonoBehaviour
 {
     [SerializeField] private TMP_Text _feedbackText;
-    [SerializeField] private ExperimentStage _experimentStage;
     
     public void StatisticsAvailable(Statistics statistics)
     {
@@ -19,8 +18,7 @@ public class FeedbackPanel : MonoBehaviour
                              + "\n Misses : "
                              + statistics.falseNegativeCount
                              + "\n Mean confidence rating : "
-                             + statistics.meanConfidenceRating 
-                             + " seconds";
+                             + statistics.meanConfidenceRating;
         GetComponent<PanelDimmer>().Show();
     }
 }

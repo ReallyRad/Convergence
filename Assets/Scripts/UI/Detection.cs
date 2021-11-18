@@ -46,7 +46,7 @@ public class Detection : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.B) && !_bPressed) //&& experimentStage.stage == Stage.online && stage == Stage.online)
         {
             _stopwatch.Stop();
-            Debug.Log("B pressed. response time = " + _stopwatch.ElapsedMilliseconds);
+            Debug.Log("B pressed. Detection response time = " + _stopwatch.ElapsedMilliseconds);
             _text.text ="Listen...\n\n\n\n  \"B\" press detected";
             _response.response = ResponseValue.yes;
             _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;

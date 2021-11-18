@@ -39,18 +39,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Reset()
-    {
-        _currentVolume.Value = 0;
-        _response.responseTime = 0;
-    }
-
-    public void PlaySound(int sound)
-    {
-        if (sound == 1) _noiseSource.Play();
-        if (sound == 2) _stimulusSource.Play();
-    }
-    
     public void OkButtonPressed(Response response)
     {
         if (!_experimentStage.practiceRound)

@@ -30,9 +30,10 @@ public class ConfidenceRating : MonoBehaviour
 
     public void OKButtonPressed()
     {
-            _stopwatch.Stop();
-            Debug.Log( "Time to answer :" + _stopwatch.ElapsedMilliseconds);
-            _stopwatch.Reset();
+        _stopwatch.Stop();
+        Debug.Log( "Time to answer confidence rating :" + _stopwatch.ElapsedMilliseconds);
+        _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
+        _stopwatch.Reset();
         GetComponent<PanelDimmer>().Hide();
         _OkButtonPressedEvent.Raise();
         _response.responseTime = 0;

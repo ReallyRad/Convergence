@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b80d5b8edbc64427975aef6f9a152ea, type: 3}
   m_Name: ExperimentStage
   m_EditorClassIdentifier: 
-  stage: 1
   practiceRound: 1
   trialCount: 0
   mootTrials: 4

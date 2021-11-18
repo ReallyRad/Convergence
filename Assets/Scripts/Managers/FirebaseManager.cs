@@ -40,7 +40,7 @@ public class FirebaseManager : MonoBehaviour
   {
     //count the number of tp, fp, tn, fn, mean reaction tiems, mean confidence ratings 
 
-    RestClient.Get("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/" + playerName + "/online/responses.json").Then(response =>
+    RestClient.Get("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/" + playerName + "/responses.json").Then(response =>
     {
       Statistics statistics = new Statistics();
       int i = 0;
