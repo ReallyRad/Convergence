@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5485340379870908009}
   - component: {fileID: 8187761019603055893}
   - component: {fileID: 7378086856834708228}
-  - component: {fileID: 8566837175985840974}
+  - component: {fileID: 212315539018510656}
   m_Layer: 0
   m_Name: Confidence Rating
   m_TagString: Untagged
@@ -143,9 +143,8 @@ MonoBehaviour:
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _OkButtonPressedEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
   _confidenceSlider: {fileID: 6681469802065761291}
-  _stage: 0
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
---- !u!114 &8566837175985840974
+--- !u!114 &212315539018510656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,14 +159,14 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
-  _event: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: ad3df257dbd644dbfbd16b9b34f838ee, type: 2}
+  _event: {fileID: 11400000, guid: ad3df257dbd644dbfbd16b9b34f838ee, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7378086856834708228}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
-        m_MethodName: Reset
+        m_TargetAssemblyTypeName: ConfidenceRating, Assembly-CSharp
+        m_MethodName: Show
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

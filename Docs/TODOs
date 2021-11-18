@@ -1,15 +1,17 @@
 TODO
 - First have large steps, then use 1DB steps – maybe like here in Ableton:
 - on end screen show the signal detection values
-- the number of tp, fp, tn, fn, mean reaction tiems, mean confidence ratings 
 - randomise order of online and offline
 - merge online and offline in same rating. use the offline rating to decide the volume change.
 - log how many trial were with and without stimulus
 - change the volume in practice as well. do -5dB every time 
 - don't inclue response time in trials where there is no sound for the average response time calculation
 - set initial volume as serialized parameter so it can be adjusted
+- test the web version on some hosting online
+- merge online and offline so that we show yes/no buttons before the confidence rating. no longer need an OK button. 
 
 DONE 
+- the number of tp, fp, tn, fn, mean reaction tiems, mean confidence ratings 
 - reimplement volume decrease
 - Firebaase backend for Signal Detection Measures (Nr of TP, FP, TN, FN) RT (duration for decision) 
 - log answers for online and offline 

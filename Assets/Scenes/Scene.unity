@@ -837,6 +837,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Discrimination
       objectReference: {fileID: 0}
+    - target: {fileID: 5956451484795191038, guid: e1ccb5ddf3212451a830b7485df3812f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 9bb0de7bf6029454c9e8373255627b42, type: 2}
+    - target: {fileID: 8154983797476523406, guid: e1ccb5ddf3212451a830b7485df3812f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 9bb0de7bf6029454c9e8373255627b42, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ccb5ddf3212451a830b7485df3812f, type: 3}
 --- !u!224 &2555498142971363741 stripped

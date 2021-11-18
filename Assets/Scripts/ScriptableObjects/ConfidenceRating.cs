@@ -9,12 +9,12 @@ using Debug = UnityEngine.Debug;
 
 public class ConfidenceRating : MonoBehaviour
 {
-    [SerializeField] private Response _response;
     [SerializeField] private ObjectGameEvent _OkButtonPressedEvent;
     [SerializeField] private Slider _confidenceSlider;
+    [SerializeField] private Response _response;
     [SerializeField] private ExperimentStage _experimentStage;
+    
     private Stopwatch _stopwatch;
-
     private void OnEnable()
     {
         _confidenceSlider.onValueChanged.AddListener(delegate(float value)
@@ -30,24 +30,15 @@ public class ConfidenceRating : MonoBehaviour
 
     public void OKButtonPressed()
     {
-        //if (_stage == Stage.offline)
-        //{
             _stopwatch.Stop();
             Debug.Log( "Time to answer :" + _stopwatch.ElapsedMilliseconds);
             _stopwatch.Reset();
-        //}
         GetComponent<PanelDimmer>().Hide();
         _OkButtonPressedEvent.Raise();
         _response.responseTime = 0;
     }
 
-    public void MelodyThere(bool there)
-    {
-        if(there) _response.response = ResponseValue.yes;
-        else _response.response = ResponseValue.no;
-    }
-
-    public void Reset()
+    public void Show()
     {
         _stopwatch.Start();
         GetComponent<PanelDimmer>().Show();

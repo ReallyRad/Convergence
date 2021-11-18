@@ -10,7 +10,6 @@ using Debug = UnityEngine.Debug;
 
 public class Detection : MonoBehaviour
 {
-    [SerializeField] private ExperimentStage _experimentStage;
     [SerializeField] private Response _response;
     [SerializeField] private TMP_Text _text;
     private Stopwatch _stopwatch;
@@ -50,7 +49,7 @@ public class Detection : MonoBehaviour
             Debug.Log("B pressed. response time = " + _stopwatch.ElapsedMilliseconds);
             _text.text ="Listen...\n\n\n\n  \"B\" press detected";
             _response.response = ResponseValue.yes;
-            _response.responseTime = (int) _stopwatch.ElapsedMilliseconds;
+            _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
             _bPressed = true;
             _stopwatch.Reset();
         }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2376781709817730155}
   - component: {fileID: 2885046452176532466}
   - component: {fileID: 7050758845783291161}
-  - component: {fileID: 6475202880401311543}
+  - component: {fileID: 5010541392897638294}
   - component: {fileID: 6475202880401311542}
   m_Layer: 0
   m_Name: Discrimination
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef25a7532f744582b19f630b21f7322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6475202880401311543
+--- !u!114 &5010541392897638294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,13 +137,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2376781709817730157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f5c1695803f842ca83df92fb60fe312, type: 3}
+  m_Script: {fileID: 11500000, guid: 24c5d434099474a6da399cf1075ca666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
-  _OkButtonPressedEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
-  _confidenceSlider: {fileID: 0}
-  _stage: 1
+  _discriminationDone: {fileID: 11400000, guid: ad3df257dbd644dbfbd16b9b34f838ee, type: 2}
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &6475202880401311542
 MonoBehaviour:
@@ -165,9 +163,9 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6475202880401311543}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
-        m_MethodName: Reset
+      - m_Target: {fileID: 5010541392897638294}
+        m_TargetAssemblyTypeName: Discrimnation, Assembly-CSharp
+        m_MethodName: Show
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -455,10 +453,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6475202880401311543}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
+      - m_Target: {fileID: 5010541392897638294}
+        m_TargetAssemblyTypeName: Discrimnation, Assembly-CSharp
         m_MethodName: MelodyThere
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7050758845783291161}
+        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -805,10 +827,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6475202880401311543}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
+      - m_Target: {fileID: 5010541392897638294}
+        m_TargetAssemblyTypeName: Discrimnation, Assembly-CSharp
         m_MethodName: MelodyThere
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7050758845783291161}
+        m_TargetAssemblyTypeName: PanelDimmer, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
