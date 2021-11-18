@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Proyecto26;
 using ScriptableObjectArchitecture;
 using UnityEngine;
-using System.Linq;
 public class FirebaseManager : MonoBehaviour
 {
   private string playerName;
@@ -27,7 +25,6 @@ public class FirebaseManager : MonoBehaviour
       _responses.Add(response);
       RestClient.Put("https://convergence-5c0db-default-rtdb.europe-west1.firebasedatabase.app/" 
                      + playerName
-                     //+ _experimentStage.stage + "/"
                      + "/responses/" 
                      + responseIndex 
                      + ".json", response);
@@ -46,7 +43,7 @@ public class FirebaseManager : MonoBehaviour
       int i = 0;
       foreach (ResponseData responseData in JsonHelper.ArrayFromJson<ResponseData>(response.Text))
       {
-        switch (responseData.responseType)
+        switch (responseData.offlineResponseType)
         {
           case ResponseType.falseNegative:
             statistics.falseNegativeCount++;

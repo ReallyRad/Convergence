@@ -19,8 +19,8 @@ public class Discrimnation : MonoBehaviour
     
     public void MelodyThere(bool there)
     {
-        if (there) _response.response = ResponseValue.yes;
-        else _response.response = ResponseValue.no;
+        if (there) _response.offlineResponse = ResponseValue.yes;
+        else _response.offlineResponse = ResponseValue.no;
         _stopwatch.Stop();
         Debug.Log( "Time to answer discrimination rating :" + _stopwatch.ElapsedMilliseconds);
         _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;

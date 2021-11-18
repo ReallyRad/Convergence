@@ -33,9 +33,9 @@ public class Detection : MonoBehaviour
     public void AudioFinished()
     {
         GetComponent<PanelDimmer>().Hide();
-        if (_response.response == ResponseValue.none) //&& _experimentStage.stage == Stage.online)
+        if (_response.onlineResponse == ResponseValue.none) //&& _experimentStage.stage == Stage.online)
         {
-            _response.response = ResponseValue.no;
+            _response.onlineResponse = ResponseValue.no;
             _stopwatch.Stop();
             _stopwatch.Reset();
         }
@@ -48,7 +48,7 @@ public class Detection : MonoBehaviour
             _stopwatch.Stop();
             Debug.Log("B pressed. Detection response time = " + _stopwatch.ElapsedMilliseconds);
             _text.text ="Listen...\n\n\n\n  \"B\" press detected";
-            _response.response = ResponseValue.yes;
+            _response.onlineResponse = ResponseValue.yes;
             _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
             _bPressed = true;
             _stopwatch.Reset();
