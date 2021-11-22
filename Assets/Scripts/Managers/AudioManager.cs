@@ -39,41 +39,18 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Reset()
-    {
-        _currentVolume.Value = 0;
-        _response.responseTime = 0;
-    }
-
-    public void PlaySound(int sound)
-    {
-        if (sound == 1) _noiseSource.Play();
-        if (sound == 2) _stimulusSource.Play();
-    }
-    
     public void OkButtonPressed(Response response)
     {
         if (!_experimentStage.practiceRound)
         {
-            if (response.response == ResponseValue.yes && _stimulusSource.volume == 1f) //true positive 
-            {
-                _currentVolume.Value -= _volumeIncrements; //decrement
-                _response.responseType = ResponseType.truePositive;
-            } 
-            else if ((response.response == ResponseValue.no || _response.response == ResponseValue.none) && _stimulusSource.volume == 1f) //false negative
-            {
-                _currentVolume.Value += _volumeIncrements; //decrement
-                _response.responseType = ResponseType.falseNegative;
-            } 
-            else if (response.response == ResponseValue.yes && _stimulusSource.volume != 1f) //false positive
-            {
-                _response.responseType = ResponseType.falsePositive;
-            } 
-            else if (response.response == ResponseValue.no || _response.response == ResponseValue.none && _stimulusSource.volume != 1f) //true negative
-            {
-                response.responseType = ResponseType.trueNegative;
-            }
-        
+            response.SetResponseValueTypes(_stimulusSource.volume);
+
+            if (response.offlineResponseType == ResponseType.truePositive)
+                _stimulusSource.volume -= _volumeIncrements;
+            else if (response.offlineResponseType == ResponseType.falseNegative)
+                _stimulusSource.volume += _volumeIncrements;
+
+
             _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
         
             var randomVal = UnityEngine.Random.Range(0f, 1f); //pick a random number between 0 and 1
@@ -90,7 +67,8 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-        _response.response = ResponseValue.none;
+        _response.offlineResponse = ResponseValue.none;
+        _response.onlineResponse = ResponseValue.none;
         _response.confidence = 0.5f;    
 
         _noiseSource.Play();

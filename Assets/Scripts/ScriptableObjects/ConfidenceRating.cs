@@ -9,13 +9,12 @@ using Debug = UnityEngine.Debug;
 
 public class ConfidenceRating : MonoBehaviour
 {
-    [SerializeField] private Response _response;
     [SerializeField] private ObjectGameEvent _OkButtonPressedEvent;
     [SerializeField] private Slider _confidenceSlider;
-    [SerializeField] private Stage _stage;
+    [SerializeField] private Response _response;
     [SerializeField] private ExperimentStage _experimentStage;
+    
     private Stopwatch _stopwatch;
-
     private void OnEnable()
     {
         _confidenceSlider.onValueChanged.AddListener(delegate(float value)
@@ -31,31 +30,19 @@ public class ConfidenceRating : MonoBehaviour
 
     public void OKButtonPressed()
     {
-        if (_stage == Stage.offline)
-        {
-            _stopwatch.Stop();
-            Debug.Log( "Time to answer :" + _stopwatch.ElapsedMilliseconds);
-            _stopwatch.Reset();
-        }
+        _stopwatch.Stop();
+        Debug.Log( "Time to answer confidence rating :" + _stopwatch.ElapsedMilliseconds);
+        _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
+        _stopwatch.Reset();
         GetComponent<PanelDimmer>().Hide();
         _OkButtonPressedEvent.Raise();
         _response.responseTime = 0;
     }
 
-    public void MelodyThere(bool there)
+    public void Show()
     {
-        if(there) _response.response = ResponseValue.yes;
-        else _response.response = ResponseValue.no;
-    }
-
-    public void Reset()
-    {
-        if (_experimentStage.stage == _stage)
-        {
-            if (_stage == Stage.offline) 
-                _stopwatch.Start();
-            GetComponent<PanelDimmer>().Show();
-            _confidenceSlider.value = 0.5f;    
-        }
+        _stopwatch.Start();
+        GetComponent<PanelDimmer>().Show();
+        _confidenceSlider.value = 0.5f;    
     }
 }

@@ -6,8 +6,29 @@ public enum ResponseType {truePositive, trueNegative, falsePositive, falseNegati
 [CreateAssetMenu] [Serializable]
 public class Response : ScriptableObject
 {
-    public ResponseValue response;
+    public ResponseValue onlineResponse;
+    public ResponseType onlineResponseType;
+    public ResponseValue offlineResponse;
+    public ResponseType offlineResponseType;
     public float confidence;
     public int responseTime;
-    public ResponseType responseType;
+
+
+    public void SetResponseValueTypes(float stimulusVolume)
+    {
+        onlineResponseType = ClassifyResponseTypes(onlineResponse, stimulusVolume);
+        offlineResponseType = ClassifyResponseTypes(offlineResponse, stimulusVolume);
+    }
+    
+    private ResponseType ClassifyResponseTypes(ResponseValue response, float stimulusLevel)
+    {
+        if (response == ResponseValue.yes && stimulusLevel == 1f)  
+            return ResponseType.truePositive;
+        if ((response == ResponseValue.no || response == ResponseValue.none) && stimulusLevel == 1f)
+            return ResponseType.falseNegative;
+        if (response == ResponseValue.yes && stimulusLevel != 1f) 
+            return ResponseType.falsePositive;
+        
+        return ResponseType.trueNegative;
+    }
 }
