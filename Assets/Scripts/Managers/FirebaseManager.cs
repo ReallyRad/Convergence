@@ -41,31 +41,39 @@ public class FirebaseManager : MonoBehaviour
     {
       Statistics statistics = new Statistics();
       int i = 0;
+      int negativesCount = 0;
       foreach (ResponseData responseData in JsonHelper.ArrayFromJson<ResponseData>(response.Text))
       {
         switch (responseData.offlineResponseType)
         {
           case ResponseType.falseNegative:
             statistics.falseNegativeCount++;
+            negativesCount++; 
             break;
           case ResponseType.falsePositive:
             statistics.falsePositiveCount++;
             break;
           case ResponseType.trueNegative:
             statistics.trueNegativeCount++;
+            negativesCount++;
             break;
           case ResponseType.truePositive:
             statistics.truePositiveCount++;
             break;
         }
 
-        statistics.meanReactionTime += responseData.responseTime;
+        if (responseData.offlineResponseType != ResponseType.falseNegative ||
+            responseData.offlineResponseType != ResponseType.trueNegative) 
+        { //only count reaction time for stimulus that are not pure noise.
+          statistics.meanReactionTime += responseData.responseTime;  
+        }
+        
         statistics.meanConfidenceRating += responseData.confidence;
 
         i++;
       }
 
-      statistics.meanReactionTime =  statistics.meanReactionTime  / i;
+      statistics.meanReactionTime =  statistics.meanReactionTime / (i - negativesCount);
       statistics.meanConfidenceRating = statistics.meanConfidenceRating / i;
       
       _statisticsAvailable.Raise(statistics);
