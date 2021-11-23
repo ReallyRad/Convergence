@@ -15,12 +15,15 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private float _probabilityCutoff;
     [SerializeField] private float _volumeIncrements;
+    [SerializeField] private float _practiceVolumeIncrements;
+
+    [SerializeField] private float _initialVolume;
     
     private bool _audioPlaying;
     
     private void Awake()
     {
-        _currentVolume.Value = 0;
+        _currentVolume.Value = _initialVolume;
     }
     
     private void Update()
@@ -46,26 +49,40 @@ public class AudioManager : MonoBehaviour
             response.SetResponseValueTypes(_stimulusSource.volume);
 
             if (response.offlineResponseType == ResponseType.truePositive)
-                _stimulusSource.volume -= _volumeIncrements;
+                _currentVolume.Value -= _volumeIncrements;
             else if (response.offlineResponseType == ResponseType.falseNegative)
-                _stimulusSource.volume += _volumeIncrements;
-
-
-            _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
-        
-            var randomVal = UnityEngine.Random.Range(0f, 1f); //pick a random number between 0 and 1
+                _currentVolume.Value += _volumeIncrements;
             
-            if (randomVal <= _probabilityCutoff) //1 in probablalityCutoff times, play both sounds 
+            if (_experimentStage.trialCount > _experimentStage.alwaysStimulusTrials) //if we had enough trials with stimulus always on
             {
-                _noiseSource.volume = 1f; 
-                _stimulusSource.volume = 1f;
-            }
-            else if (randomVal >= _probabilityCutoff) //1 in 1 - probabilityCutoff times, play noise only 
-            {
-                _noiseSource.volume = 1f;
-                _stimulusSource.volume = 0f;
+                if (response.confidence < _experimentStage.perceptualAmbiguityThreshold) //if the subject is not sure whether he heard the stimulus anymore
+                {
+                    _experimentStage.alwaysShowingStimulus = false;
+                }
+
+                if (!_experimentStage.alwaysShowingStimulus)
+                {
+                    var randomVal = UnityEngine.Random.Range(0f, 1f); //pick a random number between 0 and 1
+                
+                    if (randomVal <= _probabilityCutoff) //1 in probablalityCutoff times, play both sounds 
+                    {
+                        _noiseSource.volume = 1f; 
+                        _stimulusSource.volume = 1f;
+                    }
+                    else if (randomVal >= _probabilityCutoff) //1 in 1 - probabilityCutoff times, play noise only 
+                    {
+                        _noiseSource.volume = 1f;
+                        _stimulusSource.volume = 0f;
+                    }    
+                }
             }
         }
+        else //if in practice
+        {
+            _currentVolume.Value -= _practiceVolumeIncrements;
+        }
+
+        _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
 
         _response.offlineResponse = ResponseValue.none;
         _response.onlineResponse = ResponseValue.none;

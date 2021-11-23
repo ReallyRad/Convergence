@@ -12,6 +12,7 @@ public class StateManager : MonoBehaviour
     {
         _experimentStage.trialCount = 0;
         _experimentStage.practiceRound = true;
+        _experimentStage.alwaysShowingStimulus = true;
     }
 
     public void ResponseLogged()
@@ -20,7 +21,7 @@ public class StateManager : MonoBehaviour
         
         if (_experimentStage.practiceRound) //if we are in a practice round
         {
-           if (_experimentStage.trialCount < _experimentStage.mootTrials) //if we haven't reached the last trial
+           if (_experimentStage.trialCount < _experimentStage.practiceTrials) //if we haven't reached the last trial
            {
                _trialDone.Raise(); //go for another round
            }
