@@ -1,14 +1,14 @@
 TODO
-- First have large steps, then use 1DB steps – maybe like here in Ableton:
-- change the volume in practice as well. do -5dB every time 
-- don't inclue response time in trials where there is no sound for the average response time calculation
-- set initial volume as serialized parameter so it can be adjusted
-- test the web version on some hosting online
-- have repo public in order to be able to host it on github pages
-- first 5-8 trials of the main experiment always stimulus, (probability of not showing the melody is 0) Only when closer to the treshhold we should start presenting noise only trials. Actually  best thing would be to only start presentig noise only trials, when a confidence value of under 60% is given, to make sure we are at perceptual ambiguity. 
+
+- don't include response time in trials where there is no sound for the average response time calculation (either true or false negative)
 
 
 DONE 
+- change the volume in practice as well. do -5dB every time 
+- set initial volume as serialized parameter so it can be adjusted
+- first 5-8 trials of the main experiment always stimulus, (probability of not showing the melody is 0) Only when closer to the treshhold we should start presenting noise only trials. Actually  best thing would be to only start presentig noise only trials, when a confidence value of under 60% is given, to make sure we are at perceptual ambiguity. 
+- have repo public in order to be able to host it on github pages
+- test the web version on some hosting online
 - merge online and offline in same rating. use the offline rating to decide the volume change.
 - on end screen show the signal detection values
 - merge online and offline so that we show yes/no buttons before the confidence rating. no longer need an OK button. 
