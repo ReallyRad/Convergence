@@ -15,7 +15,7 @@ MonoBehaviour:
   practiceRound: 0
   trialCount: 5
   practiceTrials: 2
-  numberOfTrials: 8
-  alwaysStimulusTrials: 2
+  numberOfTrials: 10
+  alwaysStimulusTrials: 5
   perceptualAmbiguityThreshold: 0.6
   alwaysShowingStimulus: 1
