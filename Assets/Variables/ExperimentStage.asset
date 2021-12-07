@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b80d5b8edbc64427975aef6f9a152ea, type: 3}
   m_Name: ExperimentStage
   m_EditorClassIdentifier: 
-  practiceRound: 0
-  trialCount: 5
-  practiceTrials: 2
-  numberOfTrials: 10
-  alwaysStimulusTrials: 5
+  practiceRound: 1
+  trialCount: 0
+  practiceTrials: 4
+  numberOfTrials: 30
+  alwaysStimulusTrials: 4
   perceptualAmbiguityThreshold: 0.6
   alwaysShowingStimulus: 1

@@ -219,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f9b9c52cc8d4bb6a66b74b1256906c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stage: 0
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &3830543819000957065
 MonoBehaviour:
@@ -318,17 +317,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-
-
-
-
-
-    In the main experiment there are 2 longer blocks of trials.
-    The melody will be played at or near perceptual threshold, but it will still
-    appear 50% of the time. Remember to always press "B", as soon as you hear the
-    melody.'
+  m_text: "\n\nIf you  understood how the task works, you may start with the main
+    experiment. If you are still unsure, please repeat the practice trials. \t\t\t\t\t\t\n\t\nThe
+    main experiment consists of 50 trials of detecting the melody. The loudness of
+    the melody will be adapted to your perceptual threshold in small steps.  There
+    are some trials where the melody is played and some trials where it is not played.
+    Remember to always press \"B\", as soon as you hear the melody.\t\t\t \t\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
@@ -433,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 160}
+  m_AnchoredPosition: {x: 0, y: 240}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8818732291274850595
@@ -609,7 +603,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Main Experiment
+    Experiment I
 
 
 
@@ -641,8 +635,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
