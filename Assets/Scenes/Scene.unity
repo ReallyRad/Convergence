@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Confidence Rating
       objectReference: {fileID: 0}
+    - target: {fileID: 515070170379434980, guid: 9ca7d041fd11e49ffa96b4e684ac18bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2190957880042764621, guid: 9ca7d041fd11e49ffa96b4e684ac18bc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -836,6 +840,10 @@ PrefabInstance:
     - target: {fileID: 2376781709817730157, guid: e1ccb5ddf3212451a830b7485df3812f, type: 3}
       propertyPath: m_Name
       value: Discrimination
+      objectReference: {fileID: 0}
+    - target: {fileID: 2376781709817730157, guid: e1ccb5ddf3212451a830b7485df3812f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5956451484795191038, guid: e1ccb5ddf3212451a830b7485df3812f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1234,6 +1242,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Detection
       objectReference: {fileID: 0}
+    - target: {fileID: 1081431196861846211, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399027019986992977, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399027019986992977, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
 --- !u!224 &8704789096720180279 stripped
@@ -1261,6 +1281,10 @@ PrefabInstance:
     - target: {fileID: 1946691827536622471, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
       propertyPath: m_Name
       value: Practice Instructions
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884651651011319796, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 3428760090272560604, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
       propertyPath: m_Pivot.x

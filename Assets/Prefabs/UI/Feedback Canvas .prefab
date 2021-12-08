@@ -377,8 +377,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _feedbackText: {fileID: 573837643933547808}
-  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
-  _stage: 0
 --- !u!114 &2077068531981858162
 MonoBehaviour:
   m_ObjectHideFlags: 0
