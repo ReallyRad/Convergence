@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   practiceRound: 1
   trialCount: 0
-  practiceTrials: 4
-  numberOfTrials: 30
+  practiceTrials: 2
+  numberOfTrials: 2
   alwaysStimulusTrials: 4
   perceptualAmbiguityThreshold: 0.6
   alwaysShowingStimulus: 1

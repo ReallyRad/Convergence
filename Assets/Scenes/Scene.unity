@@ -539,10 +539,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Confidence Rating
       objectReference: {fileID: 0}
-    - target: {fileID: 515070170379434980, guid: 9ca7d041fd11e49ffa96b4e684ac18bc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2190957880042764621, guid: 9ca7d041fd11e49ffa96b4e684ac18bc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1242,18 +1238,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Detection
       objectReference: {fileID: 0}
-    - target: {fileID: 1081431196861846211, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399027019986992977, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
-      propertyPath: m_fontSize
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399027019986992977, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
 --- !u!224 &8704789096720180279 stripped
@@ -1282,9 +1266,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Practice Instructions
       objectReference: {fileID: 0}
-    - target: {fileID: 2884651651011319796, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 140
+    - target: {fileID: 1946691827536622471, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3428760090272560604, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
       propertyPath: m_Pivot.x
@@ -1369,6 +1353,16 @@ PrefabInstance:
     - target: {fileID: 3428760090272560604, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827257290976965802, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
+      propertyPath: m_text
+      value: "In this experiment you will listen for a melody in briefly presented
+        noise. Your task is to press \"B\" on your keyboard as soon as you hear or
+        think you hear the melody. If there is no melody, wait till the noise stops.
+        After each trial, rate how sure you are of whether you have detected the
+        melody or not.\n\nThere are 4 practice trials, to demonstrate what the melody
+        sounds like. The melody will become increasingly more difficult to perceive
+        over time. \n\n \t\t   Wear headphones for the test."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
