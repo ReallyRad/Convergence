@@ -317,11 +317,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "If you  understood how the task works, you may start with the main experiment.
-    \n\nThe main experiment consists of 40 trials of detecting the melody. The loudness
-    of the melody will be adapted to your perceptual threshold in small steps. There
-    are some trials where the melody is played and some trials where it is not played.
-    Remember to always press \"B\", as soon as you hear the melody.\t\t \t\t"
+  m_text: "\n\nThe main experiment consists of 40 trials of detecting the melody.
+    There are some trials where the melody is played and some trials where it is
+    not played. \n\n       Remember to always press \"B\", as soon as you hear the
+    melody.\t\t \t\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}

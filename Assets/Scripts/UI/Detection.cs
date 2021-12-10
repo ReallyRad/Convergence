@@ -23,7 +23,7 @@ public class Detection : MonoBehaviour
     public void ReadyToShow()
     {
         GetComponent<PanelDimmer>().Show();
-        _text.text = " Press \"B\" when you hear the melody.";
+        _text.text = " Press \"B\" as soon as you hear the melody.";
 
         _stopwatch.Start();
         Debug.Log("starting stopwatch");
@@ -47,7 +47,7 @@ public class Detection : MonoBehaviour
         {
             _stopwatch.Stop();
             Debug.Log("B pressed. Detection response time = " + _stopwatch.ElapsedMilliseconds);
-            _text.text = " \"B\" press detected.";
+            _text.text = " ";
             _response.onlineResponse = ResponseValue.yes;
             _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
             _bPressed = true;

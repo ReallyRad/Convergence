@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Confidence Rating
       objectReference: {fileID: 0}
+    - target: {fileID: 515070170379434980, guid: 9ca7d041fd11e49ffa96b4e684ac18bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2190957880042764621, guid: 9ca7d041fd11e49ffa96b4e684ac18bc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1141,6 +1145,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _initialVolume
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _volumeIncrements
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
+      propertyPath: _practiceVolumeIncrements
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
 --- !u!1001 &8633290954931631861
@@ -1237,6 +1253,10 @@ PrefabInstance:
     - target: {fileID: 1081431196861846211, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
       propertyPath: m_Name
       value: Detection
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081431196861846211, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8104477d69b7440a9b597546395de6ae, type: 3}
