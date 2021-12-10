@@ -494,12 +494,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "In this experiment you will listen for a melody in briefly presented noise.
-    If there is a melody, press \"B\" as soon as you hear the melody. If there is
-    no melody, wait till the noise stops. After each trial, rate how sure you are
-    of whether you have detected the melody or not.\n\nThere are 4 practice blocks.
-    The first two blocks will be the easiest, to demonstrate what the melody sounds
-    like. The melody will become increasingly more difficult to perceive over time.
-    \n\n \t\t   Wear headphones for the test."
+    Your task is to press \"B\" on your keyboard as soon as you hear or think you
+    hear the melody. If there is no melody, wait till the noise stops. After each
+    trial, rate how sure you are of whether you have heard the melody or not.\n\nThere
+    are 4 practice trials, to demonstrate what the melody sounds like. The melody
+    will become increasingly more difficult to perceive over time. \n\n \t\t   Wear
+    headphones for the test."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
@@ -526,8 +526,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -633,12 +633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Experiment Instructions
-
-
-
-
-'
+  m_text: Experiment Instructions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
