@@ -15,7 +15,11 @@ MonoBehaviour:
   practiceRound: 1
   trialCount: 1
   practiceTrials: 4
+<<<<<<< Updated upstream
   numberOfTrials: 20
+=======
+  numberOfTrials: 40
+>>>>>>> Stashed changes
   alwaysStimulusTrials: 3
   perceptualAmbiguityThreshold: 0.6
   alwaysShowingStimulus: 0

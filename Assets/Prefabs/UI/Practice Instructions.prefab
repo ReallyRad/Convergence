@@ -493,13 +493,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In this experiment you will listen for a melody in briefly presented noise.
-    Your task is to press \"B\" on your keyboard as soon as you hear or think you
-    hear the melody. If there is no melody, wait till the noise stops. After each
-    trial, rate how sure you are of whether you have heard the melody or not.\n\nThere
-    are 4 practice trials, to demonstrate what the melody sounds like. The melody
-    will become increasingly more difficult to perceive over time. \n\n \t\t   Wear
-    headphones for the test."
+  m_text: "In this experiment, you will be presented auditory noise. Your task is
+    to decide whether there is also a melody presented or not. If you hear a melody
+    press \"B\" as soon as you hear it. After each trial, rate your confidence in
+    whether you have detected the melody or not.\n\nThere are 4 practice trials,
+    to demonstrate what the melody sounds like. The melody will become increasingly
+    more difficult to perceive over time. \n\n      Please perform the experiment
+    in a quiet place and in one go. \n                 Wear headphones during the
+    entire session."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
