@@ -1151,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: _volumeIncrements
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: _probabilityCutoff
@@ -1159,7 +1159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336087286481640254, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
       propertyPath: _practiceVolumeIncrements
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62678a41cef1b451ca7b51e0f3d19321, type: 3}
@@ -1290,10 +1290,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Practice Instructions
       objectReference: {fileID: 0}
-    - target: {fileID: 1946691827536622471, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3428760090272560604, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1377,16 +1373,6 @@ PrefabInstance:
     - target: {fileID: 3428760090272560604, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827257290976965802, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
-      propertyPath: m_text
-      value: "In this experiment you will listen for a melody in briefly presented
-        noise. Your task is to press \"B\" on your keyboard as soon as you hear or
-        think you hear the melody. If there is no melody, wait till the noise stops.
-        After each trial, rate how sure you are of whether you have detected the
-        melody or not.\n\nThere are 4 practice trials, to demonstrate what the melody
-        sounds like. The melody will become increasingly more difficult to perceive
-        over time. \n\n \t\t   Wear headphones for the test."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc33f612de1fc4ac18284d82614b69fc, type: 3}
