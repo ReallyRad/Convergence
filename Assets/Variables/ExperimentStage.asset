@@ -18,4 +18,4 @@ MonoBehaviour:
   numberOfTrials: 40
   alwaysStimulusTrials: 3
   perceptualAmbiguityThreshold: 0.7
-  alwaysShowingStimulus: 0
+  alwaysShowingStimulus: 1
