@@ -12,7 +12,7 @@ public class Response : ScriptableObject
     public ResponseType offlineResponseType;
     public float confidence;
     public int responseTime;
-
+    public float currentVolume;
 
     public void SetResponseValueTypes(float stimulusVolume)
     {

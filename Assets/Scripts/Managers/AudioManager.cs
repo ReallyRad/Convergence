@@ -20,7 +20,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float _initialVolume;
     
     private bool _audioPlaying;
-    
+    [SerializeField] private int _playSoundEvery; //include a variable determine to show the melody at -5DB every X trial. 
+
     private void Awake()
     {
         _currentVolume.Value = _initialVolume;
@@ -46,13 +47,11 @@ public class AudioManager : MonoBehaviour
     {
         if (!_experimentStage.practiceRound)
         {
-            response.SetResponseValueTypes(_stimulusSource.volume);
-
-            if (response.offlineResponseType == ResponseType.truePositive)
-                _currentVolume.Value -= _volumeIncrements;
-            else if (response.offlineResponseType == ResponseType.falseNegative)
-                _currentVolume.Value += _volumeIncrements;
+            response.SetResponseValueTypes(_stimulusSource.volume);   
             
+            if (response.offlineResponseType == ResponseType.truePositive) _currentVolume.Value -= _volumeIncrements;
+            else if (response.offlineResponseType == ResponseType.falseNegative) _currentVolume.Value += _volumeIncrements;
+        
             if (_experimentStage.trialCount > _experimentStage.alwaysStimulusTrials) //if we had enough trials with stimulus always on
             {
                 if (response.confidence < _experimentStage.perceptualAmbiguityThreshold) //if the subject is not sure whether he heard the stimulus anymore
@@ -63,8 +62,8 @@ public class AudioManager : MonoBehaviour
                 if (!_experimentStage.alwaysShowingStimulus)
                 {
                     var randomVal = UnityEngine.Random.Range(0f, 1f); //pick a random number between 0 and 1
-                
-                    if (randomVal <= _probabilityCutoff) //1 in probablalityCutoff times, play both sounds 
+            
+                    if (randomVal <= _probabilityCutoff) //1 in probabilityCutoff times, play both sounds 
                     {
                         _noiseSource.volume = 1f; 
                         _stimulusSource.volume = 1f;
@@ -82,12 +81,22 @@ public class AudioManager : MonoBehaviour
             _currentVolume.Value -= _practiceVolumeIncrements;
         }
 
-        _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
-
+        if (_experimentStage.practiceRound || _experimentStage.trialCount % _playSoundEvery != 0)
+        {
+            _mixer.SetFloat("StimulusVolume", _currentVolume.Value);
+            response.currentVolume = _currentVolume.Value;
+        }
+        else if (_experimentStage.trialCount % _playSoundEvery == 0)
+        {
+            _mixer.SetFloat("StimulusVolume", 0);
+            _stimulusSource.volume = 1f;
+            response.currentVolume = 0;
+        }  
+            
         _response.offlineResponse = ResponseValue.none;
         _response.onlineResponse = ResponseValue.none;
-        _response.confidence = 0.5f;    
-
+        _response.confidence = 0.5f;
+        
         _noiseSource.Play();
         _stimulusSource.Play();    
     }

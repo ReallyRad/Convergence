@@ -7,7 +7,7 @@ public class StateManager : MonoBehaviour
     [SerializeField] private GameEvent _practiceFinished;
     [SerializeField] private GameEvent _trialDone;
     [SerializeField] private ExperimentStage _experimentStage;
-    
+
     private void Awake()
     {
         _experimentStage.trialCount = 0;
