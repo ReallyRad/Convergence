@@ -6,7 +6,7 @@ using ScriptableObjectArchitecture;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-public class Discrimnation : MonoBehaviour
+public class Discrimnation : MonoBehaviour //OfflineDetection
 {
     private Stopwatch _stopwatch;
     [SerializeField] private GameEvent _discriminationDone;
@@ -19,8 +19,9 @@ public class Discrimnation : MonoBehaviour
     
     public void MelodyThere(bool there)
     {
-        if (there) _response.offlineResponse = ResponseValue.yes;
-        else _response.offlineResponse = ResponseValue.no;
+        _response._experimentStage = Stage.offline; 
+        if (there) _response.response = ResponseValue.yes;
+        else _response.response = ResponseValue.no;
         _stopwatch.Stop();
         Debug.Log( "Time to answer discrimination rating :" + _stopwatch.ElapsedMilliseconds);
         _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;

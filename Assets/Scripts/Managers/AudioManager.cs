@@ -49,8 +49,8 @@ public class AudioManager : MonoBehaviour
         {
             response.SetResponseValueTypes(_stimulusSource.volume);   
             
-            if (response.offlineResponseType == ResponseType.truePositive) _currentVolume.Value -= _volumeIncrements;
-            else if (response.offlineResponseType == ResponseType.falseNegative) _currentVolume.Value += _volumeIncrements;
+            if (response.responseType == ResponseType.truePositive) _currentVolume.Value -= _volumeIncrements;
+            else if (response.responseType == ResponseType.falseNegative) _currentVolume.Value += _volumeIncrements;
         
             if (_experimentStage.trialCount > _experimentStage.alwaysStimulusTrials) //if we had enough trials with stimulus always on
             {
@@ -93,8 +93,7 @@ public class AudioManager : MonoBehaviour
             response.currentVolume = 0;
         }  
             
-        _response.offlineResponse = ResponseValue.none;
-        _response.onlineResponse = ResponseValue.none;
+        _response.response = ResponseValue.none;
         _response.confidence = 0.5f;
         
         _noiseSource.Play();

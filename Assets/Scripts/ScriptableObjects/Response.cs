@@ -6,18 +6,16 @@ public enum ResponseType {truePositive, trueNegative, falsePositive, falseNegati
 [CreateAssetMenu] [Serializable]
 public class Response : ScriptableObject
 {
-    public ResponseValue onlineResponse;
-    public ResponseType onlineResponseType;
-    public ResponseValue offlineResponse;
-    public ResponseType offlineResponseType;
+    public ResponseValue response;
+    public Stage _experimentStage;
+    public ResponseType responseType;
     public float confidence;
     public int responseTime;
     public float currentVolume;
 
     public void SetResponseValueTypes(float stimulusVolume)
     {
-        onlineResponseType = ClassifyResponseTypes(onlineResponse, stimulusVolume);
-        offlineResponseType = ClassifyResponseTypes(offlineResponse, stimulusVolume);
+        responseType = ClassifyResponseTypes(response, stimulusVolume);
     }
     
     private ResponseType ClassifyResponseTypes(ResponseValue response, float stimulusLevel)

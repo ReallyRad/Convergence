@@ -4,12 +4,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using ScriptableObjectArchitecture;
 using TMPro;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class Detection : MonoBehaviour
 {
+    public Stage stage;
+
+    [SerializeField] private ExperimentStage _experimentStage;
     [SerializeField] private Response _response;
     [SerializeField] private TMP_Text _text;
     private Stopwatch _stopwatch;
@@ -22,20 +26,31 @@ public class Detection : MonoBehaviour
 
     public void ReadyToShow()
     {
-        GetComponent<PanelDimmer>().Show();
-        _text.text = " Press \"B\" as soon as you hear the melody.";
+        if (stage == _experimentStage.stage)
+        {
+            GetComponent<PanelDimmer>().Show();
+            
+            if (stage == Stage.offline) _text.text ="Listen...";
+                
+            else if (stage == Stage.online)  _text.text ="Listen...\n\n\n\n  Press \"B\" when you hear the melody";
 
-        _stopwatch.Start();
-        Debug.Log("starting stopwatch");
-        _bPressed = false;
+            _response.response = ResponseValue.none;
+            
+            if (_experimentStage.stage == Stage.online)
+            {
+                _stopwatch.Start();
+                Debug.Log("starting stopwatch");
+                _bPressed = false;
+            }
+        }
     }
 
     public void AudioFinished()
     {
         GetComponent<PanelDimmer>().Hide();
-        if (_response.onlineResponse == ResponseValue.none) //&& _experimentStage.stage == Stage.online)
+        if (_response.response == ResponseValue.none) //&& _experimentStage.stage == Stage.online)
         {
-            _response.onlineResponse = ResponseValue.no;
+            _response.response = ResponseValue.no;
             _stopwatch.Stop();
             _stopwatch.Reset();
         }
@@ -48,7 +63,7 @@ public class Detection : MonoBehaviour
             _stopwatch.Stop();
             Debug.Log("B pressed. Detection response time = " + _stopwatch.ElapsedMilliseconds);
             _text.text = " ";
-            _response.onlineResponse = ResponseValue.yes;
+            _response.response = ResponseValue.yes;
             _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
             _bPressed = true;
             _stopwatch.Reset();

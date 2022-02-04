@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 
+public enum Stage
+{
+    online,
+    offline
+};
+
 [CreateAssetMenu]
 public class ExperimentStage : ScriptableObject
 {
+    public Stage stage;
     public bool practiceRound; //whether we are currently doing practice or actual testing
     public int trialCount; //the current count of trials done (whether trial or actual)
     public int practiceTrials; //the number of practice trials that should be performed
