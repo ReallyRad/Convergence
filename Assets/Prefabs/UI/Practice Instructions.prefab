@@ -439,9 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34410dfc742a43308ee5cbaf20c8036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onlineInstructions: {fileID: 0}
-  _offlineInstructions: {fileID: 0}
-  _experimentStage: {fileID: 0}
+  _onlineInstructions: {fileID: 5827257290976965802}
+  _offlineInstructions: {fileID: 6441634160098551859}
+  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &192196754307603356
 MonoBehaviour:
   m_ObjectHideFlags: 0

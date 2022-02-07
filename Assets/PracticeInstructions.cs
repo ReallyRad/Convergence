@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PracticeInstructions : MonoBehaviour
 {
-    [SerializeField] private Text _onlineInstructions;
-    [SerializeField] private Text _offlineInstructions;
+    [SerializeField] private TMP_Text _onlineInstructions;
+    [SerializeField] private TMP_Text _offlineInstructions;
     [SerializeField] private ExperimentStage _experimentStage;
     // Start is called before the first frame update
 
