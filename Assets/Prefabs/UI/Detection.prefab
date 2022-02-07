@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9f1463b69394bff926f75f2d0a2afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stage: 0
+  _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _text: {fileID: 4399027019986992977}
 --- !u!114 &2664586814624570091
