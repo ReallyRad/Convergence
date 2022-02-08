@@ -7,7 +7,9 @@ public class StateManager : MonoBehaviour
     [SerializeField] private GameEvent _practiceFinished;
     [SerializeField] private GameEvent _trialDone;
     [SerializeField] private ExperimentStage _experimentStage;
-
+    [SerializeField] private bool _separateOnlineAndOffline;
+    [SerializeField] private GameEvent _firstExperimentFinished;
+    [SerializeField] private GameEvent _secondExperimentFinished;
     private void Awake()
     {
         _experimentStage.trialCount = 0;
@@ -34,13 +36,43 @@ public class StateManager : MonoBehaviour
         }
         else //if we are done with practice
         {
-            if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
+            if (_separateOnlineAndOffline)
             {
-                _trialDone.Raise(); //go for another round
+                if (_experimentStage.stage == Stage.online) //if we are doing online 
+                {
+                    if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
+                    {
+                        _trialDone.Raise(); //go for another round
+                    }
+                    else //if we reached the last online trial, switch to offline
+                    {
+                        _experimentStage.stage = Stage.offline; //switch to offline
+                        _experimentStage.practiceRound = true;
+                        _firstExperimentFinished.Raise();
+                    }    
+                }
+                else //if we are doing offline
+                {
+                    if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
+                    {
+                        _trialDone.Raise(); //go for another round
+                    }
+                    else //if we reached the last trials
+                    {
+                        _secondExperimentFinished.Raise();
+                    }
+                }
             }
-            else //if we reached the last online trial, switch to offline
+            else
             {
-                _experimentFinished.Raise();
+                if (_experimentStage.trialCount < _experimentStage.numberOfTrials) //if we haven't reached the last trial
+                {
+                    _trialDone.Raise(); //go for another round
+                }
+                else //if we reached the last online trial, switch to offline
+                {
+                    _experimentFinished.Raise();
+                }
             }
         }
     }

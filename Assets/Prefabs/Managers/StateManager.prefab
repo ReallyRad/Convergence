@@ -48,6 +48,9 @@ MonoBehaviour:
   _practiceFinished: {fileID: 11400000, guid: 61c62c3f1b5434b64bde0b13261346f9, type: 2}
   _trialDone: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
+  _separateOnlineAndOffline: 0
+  _firstExperimentFinished: {fileID: 11400000, guid: 9046de1320086494591abc7675a1fc84, type: 2}
+  _secondExperimentFinished: {fileID: 11400000, guid: 485907da546014370871df02e8719f22, type: 2}
 --- !u!114 &7809964100416283205
 MonoBehaviour:
   m_ObjectHideFlags: 0
