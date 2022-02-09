@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8187761019603055893}
   - component: {fileID: 7378086856834708228}
   - component: {fileID: 212315539018510656}
+  - component: {fileID: 7310026397825271471}
   m_Layer: 0
   m_Name: Confidence Rating
   m_TagString: Untagged
@@ -112,7 +113,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515070170379434980}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -167,7 +168,39 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7378086856834708228}
         m_TargetAssemblyTypeName: ConfidenceRating, Assembly-CSharp
-        m_MethodName: Show
+        m_MethodName: DiscriminationDone
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7310026397825271471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515070170379434980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
+  _event: {fileID: 11400000, guid: 71a2368b4a2f74427a9c39aa9f9875c1, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7378086856834708228}
+        m_TargetAssemblyTypeName: ConfidenceRating, Assembly-CSharp
+        m_MethodName: AudioFinished
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

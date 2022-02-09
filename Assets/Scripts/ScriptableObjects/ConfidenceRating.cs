@@ -41,9 +41,17 @@ public class ConfidenceRating : MonoBehaviour
         _response.responseTime = 0;
     }
 
+    public void AudioFinished()
+    {
+        if (_experimentStage.stage == Stage.online)
+        {
+            Show();
+        }
+    }
+    
     public void Show()
     {
-        _answerGameObject.SetActive(_experimentStage.stage == Stage.online);
+        _answerGameObject.SetActive(_experimentStage.stage == Stage.offline);
         _stopwatch.Start();
         GetComponent<PanelDimmer>().Show();
         _confidenceSlider.value = 0.5f;    

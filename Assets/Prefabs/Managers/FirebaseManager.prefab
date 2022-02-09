@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7723583213136056276}
   - component: {fileID: 7723583213136056277}
   - component: {fileID: 7723583213136056278}
-  - component: {fileID: 3862283587975677315}
+  - component: {fileID: 7999544068863008739}
   m_Layer: 0
   m_Name: FirebaseManager
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3862283587975677315
+--- !u!114 &7999544068863008739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
+  _previouslyRegisteredEvent: {fileID: 0}
   _event: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
   _response:
     m_PersistentCalls:

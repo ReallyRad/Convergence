@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7809964100416283207}
   - component: {fileID: 7809964100416283204}
   - component: {fileID: 7809964100416283205}
+  - component: {fileID: 6396226724869979391}
   m_Layer: 0
   m_Name: StateManager
   m_TagString: Untagged
@@ -46,11 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _experimentFinished: {fileID: 11400000, guid: 6f0c54f0a8a2747569b6bf4a0b467d95, type: 2}
   _practiceFinished: {fileID: 11400000, guid: 61c62c3f1b5434b64bde0b13261346f9, type: 2}
+  _showPracticeInstructions: {fileID: 11400000, guid: 93e897f7ce45b44a8b67fd81eccad3cc, type: 2}
   _trialDone: {fileID: 11400000, guid: 9a7e6b51ee36f41ebb7b8fad3e080e3d, type: 2}
+  _showEndPanel: {fileID: 11400000, guid: 9bacf8ca0c11442ea84981f4d66db54c, type: 2}
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
-  _separateOnlineAndOffline: 0
-  _firstExperimentFinished: {fileID: 11400000, guid: 9046de1320086494591abc7675a1fc84, type: 2}
-  _secondExperimentFinished: {fileID: 11400000, guid: 485907da546014370871df02e8719f22, type: 2}
+  _separateOnlineAndOffline: 1
 --- !u!114 &7809964100416283205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: dcf5b3ab8ae1d4a9b8ca29aeeba68a84, type: 2}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: d548a4580c5424158b5ffba736420bfe, type: 2}
   _event: {fileID: 11400000, guid: d548a4580c5424158b5ffba736420bfe, type: 2}
   _response:
     m_PersistentCalls:
@@ -74,6 +75,38 @@ MonoBehaviour:
       - m_Target: {fileID: 7809964100416283204}
         m_TargetAssemblyTypeName: StateManager, Assembly-CSharp
         m_MethodName: ResponseLogged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6396226724869979391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7809964100416283206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: ba30c9a93bc974749b53760fc37cf905, type: 2}
+  _event: {fileID: 11400000, guid: ba30c9a93bc974749b53760fc37cf905, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7809964100416283204}
+        m_TargetAssemblyTypeName: StateManager, Assembly-CSharp
+        m_MethodName: FeedbackOkButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

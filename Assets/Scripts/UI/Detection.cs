@@ -38,7 +38,6 @@ public class Detection : MonoBehaviour
             Debug.Log("starting stopwatch");
             _bPressed = false;
         }
-    
     }
 
     public void AudioFinished()
@@ -54,7 +53,7 @@ public class Detection : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.B) && !_bPressed) //&& experimentStage.stage == Stage.online && stage == Stage.online)
+        if (Input.GetKeyUp(KeyCode.B) && !_bPressed && _experimentStage.stage == Stage.online) //&& experimentStage.stage == Stage.online && stage == Stage.online)
         {
             _stopwatch.Stop();
             Debug.Log("B pressed. Detection response time = " + _stopwatch.ElapsedMilliseconds);

@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 3195733918243159600}
   - component: {fileID: 6441634160098551859}
   m_Layer: 0
-  m_Name: OfflinePracticeInstructionsText
+  m_Name: OnlinePracticeInstructionsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,8 +439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34410dfc742a43308ee5cbaf20c8036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onlineInstructions: {fileID: 5827257290976965802}
-  _offlineInstructions: {fileID: 6441634160098551859}
+  _onlineInstructions: {fileID: 6441634160098551859}
+  _offlineInstructions: {fileID: 5827257290976965802}
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
 --- !u!114 &192196754307603356
 MonoBehaviour:
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 1372871226387421276}
   - component: {fileID: 5827257290976965802}
   m_Layer: 0
-  m_Name: OnlinePracticeInstructionsText
+  m_Name: OfflinePracticeInstructionsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Experiment Instructions
+  m_text: Experiment Practice Instructions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
