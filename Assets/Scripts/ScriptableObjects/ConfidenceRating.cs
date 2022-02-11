@@ -56,4 +56,16 @@ public class ConfidenceRating : MonoBehaviour
         GetComponent<PanelDimmer>().Show();
         _confidenceSlider.value = 0.5f;    
     }
+    
+    
+    public void MelodyThere(bool there)
+    {
+        _response._experimentStage = Stage.offline; 
+        if (there) _response.response = ResponseValue.yes;
+        else _response.response = ResponseValue.no;
+        //_stopwatch.Stop();
+        //Debug.Log( "Time to answer discrimination rating :" + _stopwatch.ElapsedMilliseconds);
+        //_response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
+        _stopwatch.Reset();
+    }
 }

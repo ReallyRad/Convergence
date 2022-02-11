@@ -489,8 +489,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
+      - m_Target: {fileID: 7378086856834708228}
+        m_TargetAssemblyTypeName: ConfidenceRating, Assembly-CSharp
         m_MethodName: MelodyThere
         m_Mode: 6
         m_Arguments:
@@ -1905,8 +1905,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DiscriminationTask, Assembly-CSharp
+      - m_Target: {fileID: 7378086856834708228}
+        m_TargetAssemblyTypeName: ConfidenceRating, Assembly-CSharp
         m_MethodName: MelodyThere
         m_Mode: 6
         m_Arguments:
