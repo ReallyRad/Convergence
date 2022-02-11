@@ -20,13 +20,25 @@ public class Response : ScriptableObject
     
     private ResponseType ClassifyResponseTypes(ResponseValue response, float stimulusLevel)
     {
-        if (response == ResponseValue.yes && stimulusLevel == 1f)  
+        if (response == ResponseValue.yes && stimulusLevel == 1f)
+        {
+            Debug.Log("respohse was true positive");            
             return ResponseType.truePositive;
+        }
+
         if ((response == ResponseValue.no || response == ResponseValue.none) && stimulusLevel == 1f)
+        {
+            Debug.Log("respohse was false negative");            
             return ResponseType.falseNegative;
-        if (response == ResponseValue.yes && stimulusLevel != 1f) 
+        }
+
+        if (response == ResponseValue.yes && stimulusLevel != 1f)
+        {
+            Debug.Log(("response was false positive"));
             return ResponseType.falsePositive;
+        } 
         
+        Debug.Log(("response was true negative"));
         return ResponseType.trueNegative;
     }
 }
