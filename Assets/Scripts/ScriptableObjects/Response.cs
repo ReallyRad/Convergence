@@ -22,13 +22,13 @@ public class Response : ScriptableObject
     {
         if (response == ResponseValue.yes && stimulusLevel == 1f)
         {
-            Debug.Log("respohse was true positive");            
+            Debug.Log("response was true positive");            
             return ResponseType.truePositive;
         }
 
         if ((response == ResponseValue.no || response == ResponseValue.none) && stimulusLevel == 1f)
         {
-            Debug.Log("respohse was false negative");            
+            Debug.Log("response was false negative");            
             return ResponseType.falseNegative;
         }
 

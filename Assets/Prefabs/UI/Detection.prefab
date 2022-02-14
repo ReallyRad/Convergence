@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2664586814624570091}
   - component: {fileID: 7325793345463362791}
   - component: {fileID: 6696599075304062187}
+  - component: {fileID: 441167534519399918}
   m_Layer: 5
   m_Name: Detection
   m_TagString: Untagged
@@ -114,7 +115,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081431196861846211}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -142,10 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9f1463b69394bff926f75f2d0a2afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage: 0
   _experimentStage: {fileID: 11400000, guid: b685f3c71f8d341c9a1d935f1250a788, type: 2}
   _response: {fileID: 11400000, guid: 7ef9736725d3d43a19b63434bc1bb8e6, type: 2}
   _text: {fileID: 4399027019986992977}
+  _answerGameObject: {fileID: 2002813724388705814}
 --- !u!114 &2664586814624570091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +243,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &441167534519399918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081431196861846211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 7163308e10fac4435905a3b77211273a, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3134202096752879226}
+        m_TargetAssemblyTypeName: Detection, Assembly-CSharp
+        m_MethodName: OKButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4685913441104730794
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press "B" when you hear the melody.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
   m_sharedMaterial: {fileID: -3396107317660734308, guid: b8c7fb02e13a747619bed6818013a9b3, type: 2}
@@ -406,6 +439,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5373131288776683085}
+  - {fileID: 2286415449479889787}
   m_Father: {fileID: 1081431196861846210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -452,3 +486,130 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &4235709256003155016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 990938395180779312}
+    m_Modifications:
+    - target: {fileID: 1397590510546263934, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397590510546263934, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -105
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185659701866493675, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3134202096752879226}
+    - target: {fileID: 2185659701866493675, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MelodyThere
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185659701866493675, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Detection, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378797087322124894, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_Name
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -37.758366
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585967681172182224, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280017899823196414, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280017899823196414, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 219
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976361279711596238, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_text
+      value: Was the melody there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773493089969239976, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269396323105942660, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3134202096752879226}
+    - target: {fileID: 7269396323105942660, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MelodyThere
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269396323105942660, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Detection, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7661895075645431221, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377799821931686054, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+--- !u!1 &2002813724388705814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2378797087322124894, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+  m_PrefabInstance: {fileID: 4235709256003155016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2286415449479889787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2698423209179494195, guid: 61787dd56e6864bbab7ca1f8897f52e7, type: 3}
+  m_PrefabInstance: {fileID: 4235709256003155016}
+  m_PrefabAsset: {fileID: 0}
