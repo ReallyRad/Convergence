@@ -15,6 +15,9 @@ public class Detection : MonoBehaviour
     [SerializeField] private Response _response;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private GameObject _answerGameObject;
+    [SerializeField] private Button _OKButton;
+    [SerializeField] private Button _yesButton;
+    [SerializeField] private Button _noButton;
     
     private Stopwatch _stopwatch;
     private bool _bPressed;
@@ -28,6 +31,8 @@ public class Detection : MonoBehaviour
     {
         GetComponent<PanelDimmer>().Show();
         _answerGameObject.GetComponent<PanelDimmer>().Hide();
+        
+        _OKButton.interactable = false;
 
         if (_experimentStage.stage == Stage.offline) _text.text ="Listen...";
             
@@ -66,20 +71,35 @@ public class Detection : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.B) && !_bPressed && _experimentStage.stage == Stage.online) //&& experimentStage.stage == Stage.online && stage == Stage.online)
+        if (Input.GetKeyUp(KeyCode.B)) 
         {
-            _stopwatch.Stop();
-            Debug.Log("B pressed. Detection response time = " + _stopwatch.ElapsedMilliseconds);
-            _text.text = " ";
-            _response.response = ResponseValue.yes;
-            _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
-            _bPressed = true;
-            _stopwatch.Reset();
+            //&& experimentStage.stage == Stage.online && stage == Stage.online))
+            if (!_bPressed && _experimentStage.stage == Stage.online)
+            {
+                _bPressed = true;
+                _stopwatch.Stop();
+                Debug.Log("B pressed. Detection response time = " + _stopwatch.ElapsedMilliseconds);
+                _text.text = " ";
+                _response.response = ResponseValue.yes;
+                _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
+                _stopwatch.Reset();    
+            
+            }
+            else if (_experimentStage.stage == Stage.offline) _yesButton.onClick.Invoke();
+         
+        }
+        else if (Input.GetKeyUp(KeyCode.N))
+        {
+            if (_experimentStage.stage == Stage.offline)
+            {
+                _noButton.onClick.Invoke();
+            }
         }
     }
 
     public void MelodyThere(bool there)
     {
+        _OKButton.interactable = true;
         _response.experimentStage = Stage.offline; 
         if (there) _response.response = ResponseValue.yes;
         else _response.response = ResponseValue.no;
