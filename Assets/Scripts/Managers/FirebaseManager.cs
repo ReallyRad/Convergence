@@ -44,33 +44,36 @@ public class FirebaseManager : MonoBehaviour
       int negativesCount = 0;
       foreach (ResponseData responseData in JsonHelper.ArrayFromJson<ResponseData>(response.Text))
       {
-        switch (responseData.offlineResponseType)
+        if (responseData.experimentStage == _experimentStage.stage) //only use data from corresponding stage
         {
-          case ResponseType.falseNegative:
-            statistics.falseNegativeCount++;
-            negativesCount++; 
-            break;
-          case ResponseType.falsePositive:
-            statistics.falsePositiveCount++;
-            break;
-          case ResponseType.trueNegative:
-            statistics.trueNegativeCount++;
-            negativesCount++;
-            break;
-          case ResponseType.truePositive:
-            statistics.truePositiveCount++;
-            break;
-        }
+          switch (responseData.responseType)
+          {
+            case ResponseType.falseNegative:
+              statistics.falseNegativeCount++;
+              negativesCount++; 
+              break;
+            case ResponseType.falsePositive:
+              statistics.falsePositiveCount++;
+              break;
+            case ResponseType.trueNegative:
+              statistics.trueNegativeCount++;
+              negativesCount++;
+              break;
+            case ResponseType.truePositive:
+              statistics.truePositiveCount++;
+              break;
+          }
 
-        if (responseData.offlineResponseType != ResponseType.falseNegative ||
-            responseData.offlineResponseType != ResponseType.trueNegative) 
-        { //only count reaction time for stimulus that are not pure noise.
-          statistics.meanReactionTime += responseData.responseTime;  
-        }
+          if (responseData.responseType != ResponseType.falseNegative ||
+              responseData.responseType != ResponseType.trueNegative) 
+          { //only count reaction time for stimulus that are not pure noise.
+            statistics.meanReactionTime += responseData.responseTime;  
+          }
         
-        statistics.meanConfidenceRating += responseData.confidence;
+          statistics.meanConfidenceRating += responseData.confidence;
 
-        i++;
+          i++;
+        }
       }
 
       statistics.meanReactionTime =  statistics.meanReactionTime / (i - negativesCount);

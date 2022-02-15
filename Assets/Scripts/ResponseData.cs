@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class ResponseData
+public class ResponseData //data model used for retrieving from Firebase Database
 {
-    public ResponseValue onlineResponse;
-    public ResponseType onlineResponseType;
-    public ResponseValue offlineResponse;
-    public ResponseType offlineResponseType;
+    public ResponseValue response;
+    public Stage experimentStage;
+    public ResponseType responseType;
     public float confidence;
     public int responseTime;
+    public float currentVolume;
 }

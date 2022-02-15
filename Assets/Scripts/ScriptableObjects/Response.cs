@@ -7,7 +7,7 @@ public enum ResponseType {truePositive, trueNegative, falsePositive, falseNegati
 public class Response : ScriptableObject
 {
     public ResponseValue response;
-    public Stage _experimentStage;
+    public Stage experimentStage;
     public ResponseType responseType;
     public float confidence;
     public int responseTime;

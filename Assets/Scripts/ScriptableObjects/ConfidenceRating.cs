@@ -31,7 +31,7 @@ public class ConfidenceRating : MonoBehaviour
     public void OKButtonPressed()
     {
         GetComponent<PanelDimmer>().Hide();
-        _response._experimentStage = _experimentStage.stage;
+        _response.experimentStage = _experimentStage.stage;
         _OkButtonPressedEvent.Raise();
         _response.responseTime = 0;
     }

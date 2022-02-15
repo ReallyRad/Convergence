@@ -16,7 +16,7 @@ public class Discrimnation : MonoBehaviour //OfflineDetection
     
     public void MelodyThere(bool there)
     {
-        _response._experimentStage = Stage.offline; 
+        _response.experimentStage = Stage.offline; 
         if (there) _response.response = ResponseValue.yes;
         else _response.response = ResponseValue.no;
         _stopwatch.Stop();
