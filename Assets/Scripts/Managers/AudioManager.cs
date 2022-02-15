@@ -100,4 +100,9 @@ public class AudioManager : MonoBehaviour
         _stimulusSource.Play();    
     }
 
+    public void FeedbackOKButtonPressed()
+    {
+        _currentVolume.Value = _initialVolume;
+    }
+    
 }

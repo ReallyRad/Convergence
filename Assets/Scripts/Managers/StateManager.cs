@@ -10,7 +10,7 @@ public class StateManager : MonoBehaviour
     [SerializeField] private GameEvent _trialDone;
     [SerializeField] private GameEvent _showEndPanel;
     [SerializeField] private ExperimentStage _experimentStage;
-    [SerializeField] private bool _separateOnlineAndOffline;
+    [SerializeField] private bool _separateOnlineAndOffline; //TODO implement merged online/offline version too
 
     private void Awake()
     {
@@ -90,6 +90,7 @@ public class StateManager : MonoBehaviour
 
     public void FeedbackOkButtonPressed()
     {
+        _experimentStage.alwaysShowingStimulus = true;
         //TODO implement randomising online/offline here
         if (_experimentStage.stage == Stage.online)
         {
