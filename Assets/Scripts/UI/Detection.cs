@@ -89,7 +89,7 @@ public class Detection : MonoBehaviour
     {
         _stopwatch.Stop();
         Debug.Log( "Time to answer melody detection :" + _stopwatch.ElapsedMilliseconds);
-        _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
+        _response.responseTime = (int) _stopwatch.ElapsedMilliseconds;
         _stopwatch.Reset();
         GetComponent<PanelDimmer>().Hide();
     }

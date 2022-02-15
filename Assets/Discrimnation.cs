@@ -21,7 +21,7 @@ public class Discrimnation : MonoBehaviour //OfflineDetection
         else _response.response = ResponseValue.no;
         _stopwatch.Stop();
         Debug.Log( "Time to answer discrimination rating :" + _stopwatch.ElapsedMilliseconds);
-        _response.responseTime += (int) _stopwatch.ElapsedMilliseconds;
+        _response.responseTime = (int) _stopwatch.ElapsedMilliseconds;
         _discriminationDone.Raise();
         _stopwatch.Reset();
     }
