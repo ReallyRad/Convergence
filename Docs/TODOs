@@ -1,9 +1,18 @@
 TODO
-
-- don't include response time in trials where there is no sound for the average response time calculation (either true or false negative)
-
+- separate feedback for online and offline?
 
 DONE 
+- are key presses also detected when detection panel is not showing?
+- first Practice Instructions must be called through event.
+- split online and offline again, randomize. 
+- don't include response time in trials where there is no sound for the average response time calculation (either true or false negative) Online or offline?
+- reset perceptual threshold between online and offline.- hook yes no buttons up
+- online offline instructions inverted
+- timing? on button pressed or slider? separate slider and button?
+- reset all values when switching between online/offline (current volume, always showing feedback)
+- prevent OK if not answered.
+- answer with keyboard in offline.
+- log trial volume.
 - change the volume in practice as well. do -5dB every time 
 - set initial volume as serialized parameter so it can be adjusted
 - first 5-8 trials of the main experiment always stimulus, (probability of not showing the melody is 0) Only when closer to the treshhold we should start presenting noise only trials. Actually  best thing would be to only start presentig noise only trials, when a confidence value of under 60% is given, to make sure we are at perceptual ambiguity. 
@@ -32,6 +41,52 @@ DONE
 
 
 
+
 [{"confidence":0.7825520634651184,"response":0,"responseTime":5033,"responseType":1},
  {"confidence":0.7434895634651184,"response":0,"responseTime":6590,"responseType":0},
  {"confidence":0.6393229365348816,"response":0,"responseTime":6369,"responseType":0},{"confidence":0.6888020634651184,"response":1,"responseTime":0,"responseType":0},{"confidence":0.6822916269302368,"response":0,"responseTime":4447,"responseType":1}]
+
+
+Online :
+Practice instructions
+Listen to sound and press B
+Confidence rating slider
+Online Experiment instructions
+Feedback
+
+Offline : 
+Practice instructions
+Listen to sound 
+Confidence rating slider + buttons 
+Offline Experiment instructions
+Feedback
+
+End
+
+
+ Practice instructions
+ Listen to sound with or without answering yes/no
+ Confidence rating with or wiuthout answering yes/no
+ Experiment Instructions
+
+ time what?
+
+data model
+confidence: 0.5
+offlineResponse: 0
+offlineResponseType: 0
+onlineResponse: 0
+onlineResponseType: 0
+responseTime: 7815
+
+
+data model
+type : online
+confidence: 0.5
+Response: 0
+ResponseType : 0
+responseTime: 7815
+
+
+
+
