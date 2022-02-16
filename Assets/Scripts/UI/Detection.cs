@@ -34,14 +34,15 @@ public class Detection : MonoBehaviour
         GetComponent<PanelDimmer>().Show();
         _answerGameObject.GetComponent<PanelDimmer>().Hide();
         
-        _OKButton.interactable = false;
-
         if (_experimentStage.stage == Stage.offline) _text.text ="Listen...";
             
         else if (_experimentStage.stage == Stage.online)  _text.text ="Listen...\n\n\n\n  Press \"B\" when you hear the melody";
 
         _response.response = ResponseValue.none;
-        
+        _yesButton.gameObject.GetComponent<Image>().color = _unselectedColor;
+        _noButton.gameObject.GetComponent<Image>().color = _unselectedColor;
+        _OKButton.interactable = false;
+
         if (_experimentStage.stage == Stage.online)
         {
             _stopwatch.Start();
