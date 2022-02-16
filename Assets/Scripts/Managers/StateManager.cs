@@ -11,7 +11,8 @@ public class StateManager : MonoBehaviour
     [SerializeField] private GameEvent _showEndPanel;
     [SerializeField] private ExperimentStage _experimentStage;
     [SerializeField] private bool _separateOnlineAndOffline; //TODO implement merged online/offline version too
-
+    [SerializeField] private Stage _startWithStage;
+    
     private void Awake()
     {
         _experimentStage.trialCount = 0;
@@ -21,7 +22,11 @@ public class StateManager : MonoBehaviour
 
     private void Start()
     {
-        _experimentStage.stage = Stage.online;
+        var randomVal = UnityEngine.Random.Range(0f, 1f); //pick a random number between 0 and 1
+        if (randomVal <= 0.5f) _startWithStage = Stage.online;
+        else _startWithStage = Stage.offline;
+
+        _experimentStage.stage = _startWithStage;
     }
 
     public void ResponseLogged()
@@ -91,16 +96,17 @@ public class StateManager : MonoBehaviour
     public void FeedbackOkButtonPressed()
     {
         _experimentStage.alwaysShowingStimulus = true;
-        //TODO implement randomising online/offline here
-        if (_experimentStage.stage == Stage.online)
-        {
-            _experimentStage.stage = Stage.offline; //switch to offline
-            _showPracticeInstructions.Raise();
-        }
-        else
-        {
-            _showEndPanel.Raise();
-        }
+        
+        //if we are at first stage, switch stage
+        if (_experimentStage.stage == _startWithStage) SwitchStage();
+        else _showEndPanel.Raise();
+    }
+    
+    private void SwitchStage()
+    {
+        if (_experimentStage.stage == Stage.online) _experimentStage.stage = Stage.offline;
+        else if (_experimentStage.stage == Stage.offline) _experimentStage.stage = Stage.online;
+        _showPracticeInstructions.Raise();    
     }
 }
  
