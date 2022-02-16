@@ -18,7 +18,9 @@ public class Detection : MonoBehaviour
     [SerializeField] private Button _OKButton;
     [SerializeField] private Button _yesButton;
     [SerializeField] private Button _noButton;
-    
+    [SerializeField] private Color _selectedColor; 
+    [SerializeField] private Color _unselectedColor; 
+        
     private Stopwatch _stopwatch;
     private bool _bPressed;
     
@@ -103,6 +105,16 @@ public class Detection : MonoBehaviour
         _response.experimentStage = Stage.offline; 
         if (there) _response.response = ResponseValue.yes;
         else _response.response = ResponseValue.no;
+        if (there)
+        {
+            _yesButton.gameObject.GetComponent<Image>().color = _selectedColor;
+            _noButton.gameObject.GetComponent<Image>().color = _unselectedColor;
+        }
+        else
+        {
+            _yesButton.gameObject.GetComponent<Image>().color = _unselectedColor;
+            _noButton.gameObject.GetComponent<Image>().color = _selectedColor;
+        }
     }
     
     public void OKButtonPressed()

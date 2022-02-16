@@ -27,6 +27,7 @@ public class StateManager : MonoBehaviour
         else _startWithStage = Stage.offline;
 
         _experimentStage.stage = _startWithStage;
+        _showPracticeInstructions.Raise();    
     }
 
     public void ResponseLogged()
