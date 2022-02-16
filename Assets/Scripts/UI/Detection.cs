@@ -19,14 +19,16 @@ public class Detection : MonoBehaviour
     [SerializeField] private Button _yesButton;
     [SerializeField] private Button _noButton;
     [SerializeField] private Color _selectedColor; 
-    [SerializeField] private Color _unselectedColor; 
-        
+    [SerializeField] private Color _unselectedColor;
+    [SerializeField] private CanvasGroup _canvasGroup;
+    
     private Stopwatch _stopwatch;
     private bool _bPressed;
     
     private void Awake()
     {
         _stopwatch = new Stopwatch();
+        _canvasGroup = GetComponent<CanvasGroup>();
     }
 
     public void ReadyToShow()
@@ -74,7 +76,7 @@ public class Detection : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.B)) 
+        if (Input.GetKeyUp(KeyCode.B) && _canvasGroup.alpha == 1) 
         {
             //&& experimentStage.stage == Stage.online && stage == Stage.online))
             if (!_bPressed && _experimentStage.stage == Stage.online)
@@ -91,7 +93,7 @@ public class Detection : MonoBehaviour
             else if (_experimentStage.stage == Stage.offline) _yesButton.onClick.Invoke();
          
         }
-        else if (Input.GetKeyUp(KeyCode.N))
+        else if (Input.GetKeyUp(KeyCode.N) && _canvasGroup.alpha == 1 && _experimentStage.stage == Stage.offline)
         {
             if (_experimentStage.stage == Stage.offline)
             {
